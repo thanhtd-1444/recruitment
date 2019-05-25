@@ -20,6 +20,10 @@ gem "ransack"
 gem "ffaker"
 gem "carrierwave"
 gem "carrierwave-base64"
+gem 'turbolinks'
+gem "bootstrap", '~>4.0.0'
+gem 'jquery-rails'
+gem 'font-awesome-sass', '~> 5.8.1'
 
 group :development, :test do
   gem "pry-rails"
