@@ -1,5 +1,8 @@
 {
   "name": "recruitment",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "^4.3.1"
+  }
 }
