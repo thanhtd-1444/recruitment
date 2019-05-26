@@ -1,2 +1,19 @@
 
-<%= render "shared/pagetitle" %>
+<section data-aos="fade-up">
+    <div class="container">
+        <%= render "shared/banner" %>
+    </div>
+</section>
+
+<section data-aos="fade-up" class="post-wrapper">
+        <%= render "shared/pagetitle" %>
+    <div class="container">
+        <div class="row">
+                <%= render "shared/post" %>
+                <%= render "shared/post" %>
+                <%= render "shared/post" %>
+        </div>
+    </div>
+</section>
+
+<%= render "shared/contact_form" %>

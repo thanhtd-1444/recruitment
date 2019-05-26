@@ -133,3 +133,36 @@ small { font-family: $body-font; }
 	background-color: #FFF;
 	@include box-shadow(0 0 10px rgba(0,0,0,0.1));
 }
+
+input.form-control {
+	height: 45px;
+
+	&::placeholder {
+		color: $myspace;
+		font-size: 14px;
+	}
+  }
+
+.accent-color {
+	color: $theme-color;
+}
+
+.form-control {
+	border-radius: 0;
+	&:focus {
+		outline: none;
+      	border-color: $theme-color;
+      	box-shadow: none;
+	}
+}
+
+label.required {
+	position: relative;
+	&:after {
+		content: '*';
+		position: absolute;
+		right: -10px;
+		color: $smashmag;
+		font-size: 16px;
+	}
+}
