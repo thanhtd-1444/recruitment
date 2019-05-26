@@ -1,14 +1,13 @@
 $(document).ready(function(){
     $(".owl-carousel").owlCarousel({
         animateOut: true,
+        itemsDesktop : true,
         animateIn: true,
         items:1,
-        autoWidth: true,
         smartSpeed:450,
         loop:true,
         autoplay: true,
-        autoplayTimeout: 5000,
-        center: true
+        autoplayTimeout: 5000
     });
 
     window.onscroll = function() {myFunction()};

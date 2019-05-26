@@ -1,8 +1,11 @@
 @import "bootstrap";
-@import "font-awesome-sprockets";
-@import "font-awesome";
+@import "./animate";
+@import 'font_awesome5_webfont';
 @import "./variable";
 @import "./header";
 @import "./typography";
 @import "./button";
 @import "scss/owl.carousel.scss";
+@import "./footer";
+@import "./aos";
+@import "./post";

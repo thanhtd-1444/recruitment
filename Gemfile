@@ -23,7 +23,8 @@ gem "carrierwave-base64"
 gem 'turbolinks'
 gem "bootstrap", '~>4.0.0'
 gem 'jquery-rails'
-gem 'font-awesome-sass', '~> 5.8.1'
+# gem 'font-awesome-sass', '~> 5.8.1'
+gem 'font_awesome5_rails'
 
 group :development, :test do
   gem "pry-rails"
