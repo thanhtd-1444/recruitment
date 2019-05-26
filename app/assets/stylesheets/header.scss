@@ -1,0 +1,105 @@
+header {
+
+    &.sticky {
+        .navbar  {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+    }
+
+    nav.navbar-dark  {
+        padding: 0;
+        background-color: $theme-color;
+
+        .navbar-toggler {
+            color: #fff;
+            border-color: transparent;
+
+            &:focus {
+                outline: none;
+            }
+        }
+        .navbar-nav {
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+        }
+
+        .navbar-nav .nav-link  {
+            color: #fff;
+            padding: 20px;
+        }
+
+        .navbar-nav {
+            justify-content: space-between;
+             width: 100%;
+        }
+
+        .nav-item {
+
+            position: relative;
+            .sub-menu {
+                max-height: 0;
+                transition: max-height 0.3s ease-out;
+                overflow: hidden;
+                background: #d5d5d5;
+                position: absolute;
+                z-index: 9999;
+            }
+
+            &:hover {
+                .sub-menu {
+                    max-height: 500px;
+                    transition: max-height 0.35s ease-in;
+                }
+            }
+        }
+    }
+
+    
+}
+
+.topbar-wrapper {
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    padding: 20px;
+
+    .information {
+        display: flex;
+        align-items: center;
+
+        .information-title {
+            color: $theme-color;
+            display: block;
+        }
+        a {
+           display: flex;
+           justify-content: flex-end;
+           margin-right: 10px;
+
+           i {
+                position: relative;
+                top: 3px;
+                margin-right: 5px;
+           }
+        }
+    }
+
+    .logo {
+        img {
+            height: 100px;
+        }
+    }
+}
+
+.gf-heading {
+    text-align: center;
+    padding: 20px 0;
+
+    .heading-sub-title {
+        color: $theme-color;
+    }
+}
