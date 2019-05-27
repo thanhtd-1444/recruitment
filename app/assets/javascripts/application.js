@@ -44,6 +44,16 @@ $(document).ready(function(){
         mirror: false,
         anchorPlacement: 'top-bottom'
       });
+
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 500) { 
+            $('#scroll').addClass('in'); 
+        } else { 
+            $('#scroll').removeClass('in'); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
 });
-
-
