@@ -1,12 +1,16 @@
-
+<%= render "layouts/slider" %>
 <section data-aos="fade-up">
     <div class="container">
         <%= render "shared/banner" %>
     </div>
 </section>
 
-<section data-aos="fade-up" class="post-wrapper">
-        <%= render "shared/pagetitle" %>
+<section class="gf-messages">
+        <%= render "message" %>
+</section>
+
+<section data-aos="fade-up" class="post-wrapper mt30">
+        <%= render partial: "shared/pagetitle", locals: { pagetitle: 'お気軽にお問い合わせください' } %>
     <div class="container">
         <div class="row">
                 <%= render "shared/post" %>

@@ -1,0 +1,41 @@
+.gf-page-heading {
+    padding: 50px 0;
+
+    .page-title {
+        margin-bottom: 0;
+        font-size: 55px;
+    }
+}
+
+// Contact Page
+
+.contact-info {
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    padding: 50px 0;
+
+    .info-content {
+        padding: 0 15px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .left {
+        font-size: 45px;
+        color: #7fa15a;
+    }
+
+    .right {
+        margin-left: 20px;
+
+        h6 {
+            color: #7fa15a;
+            font-size: 17px;
+        }
+
+        p {
+            color: #959595;
+        }
+    }
+}

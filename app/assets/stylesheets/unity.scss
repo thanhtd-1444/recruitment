@@ -1,0 +1,29 @@
+$property-map: (
+  m: margin,
+  mt: margin-top,
+  mr: margin-right,
+  mb: margin-bottom,
+  ml: margin-left,
+  p: padding,
+  pt: padding-top,
+  pr: padding-right,
+  pb: padding-bottom,
+  pl: padding-left
+);
+$sizes-list: 0 5 10 15 20 25 30;
+
+@each $size in $sizes-list {
+  $val: $size + px;
+  @each $keyword, $property in $property-map {
+    .#{$keyword}#{$size} {
+      #{$property}: $val;
+    }
+  }
+}
+
+/// Auto
+@each $keyword, $property in $property-map {
+  .#{$keyword}-auto {
+    #{$property}: auto;
+  }
+}
