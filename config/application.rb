@@ -11,6 +11,7 @@ module Recruitment
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
     config.autoload_paths += %W(#{config.root}/vendor/assets/owlcarousel)
+    config.autoload_paths += %W(#{config.root}/vendor/assets/admin)
 
 
     # Settings in config/environments/* take precedence over those specified here.
