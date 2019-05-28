@@ -34,8 +34,8 @@ $(document).ready(function(){
         disableMutationObserver: false,
         debounceDelay: 50,
         throttleDelay: 99,
-        
-      
+
+
         offset: 120,
         delay: 0,
         duration: 500,
@@ -45,15 +45,15 @@ $(document).ready(function(){
         anchorPlacement: 'top-bottom'
       });
 
-    $(window).scroll(function(){ 
-        if ($(this).scrollTop() > 500) { 
-            $('#scroll').addClass('in'); 
-        } else { 
-            $('#scroll').removeClass('in'); 
-        } 
-    }); 
-    $('#scroll').click(function(){ 
-        $("html, body").animate({ scrollTop: 0 }, 600); 
-        return false; 
-    }); 
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 500) {
+            $('#scroll').addClass('in');
+        } else {
+            $('#scroll').removeClass('in');
+        }
+    });
+    $('#scroll').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
 });

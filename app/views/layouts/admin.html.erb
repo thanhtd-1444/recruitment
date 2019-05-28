@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recruitment</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'admin/bootstrap.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'admin/font-awesome.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'admin/themify-icons.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'admin/metisMenu.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'admin/owl.carousel.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'admin/slicknav.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'admin/typography.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'admin/default-css.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'admin/styles.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'admin/responsive.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <style type="text/css">/* Chart.js */
+    @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
+    <%= javascript_include_tag 'admin/jquery-2.2.4.min.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'admin/popper.min.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'admin/bootstrap.min.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'admin/jquery.slicknav.min.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'admin/jquery.slimscroll.min.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'admin/line-chart.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'admin/metisMenu.min.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'admin/modernizr-2.8.3.min.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'admin/owl.carousel.min.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'admin/pie-chart.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'admin/plugins.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'admin/scripts.js', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="page-container">
+        <%= render "layouts/menu_admin" %>
+        <div class="main-content">
+          <div class="page-title-area">
+              <div class="row align-items-center">
+                  <div class="col-sm-6">
+                      <div class="breadcrumbs-area clearfix">
+                          <h4 class="page-title pull-left">Dashboard</h4>
+                          <ul class="breadcrumbs pull-left">
+                              <li><a href="index.html">Home</a></li>
+                              <li><span>Dashboard</span></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-sm-6 clearfix">
+                      <div class="user-profile pull-right">
+                          <%= image_tag "admin/author/avatar.png", class: "avatar"%>
+                          <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Kumkum Rai <i class="fa fa-angle-down"></i></h4>
+                          <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">Message</a>
+                              <a class="dropdown-item" href="#">Settings</a>
+                              <a class="dropdown-item" href="#">Log Out</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <%= yield %>
+        </div>
+        <%= render "layouts/footer_admin" %>
+    </div>
+  </body>
+</html>
