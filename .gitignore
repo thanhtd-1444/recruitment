@@ -29,16 +29,7 @@
 /config/secrets.yml
 coverage/
 .env
-/tmp
-/.DS_Store
-/app/.DS_Store
-/app/assets/.DS_Store
-/app/assets/images/.DS_Store
-/app/assets/javascripts/.DS_Store
-/app/assets/stylesheets/.DS_Store
-/app/assets/stylesheets/admin/.DS_Store
-
-
+/log/devlopment.log
 
 /swagger
 /public/uploads
