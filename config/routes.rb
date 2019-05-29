@@ -5,6 +5,12 @@ Rails.application.routes.draw do
   get "/about", to: "static_pages#about"
   get "/contact", to: "static_pages#contact"
 
+  devise_for :admins, controllers: {sessions: "admins/sessions", passwords: "admins/passwords"}
+
+  devise_scope :admin do
+    get "/admins/sign_out" => "devise/sessions#destroy"
+  end
+
   namespace :admins do
     resources :home, only: :index
   end
