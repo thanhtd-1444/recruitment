@@ -30,6 +30,7 @@
 coverage/
 .env
 /log/devlopment.log
+/tmp
 
 /swagger
 /public/uploads

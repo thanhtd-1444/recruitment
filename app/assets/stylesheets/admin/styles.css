@@ -2823,3 +2823,12 @@ table.dataTable thead td {
 }
 
 /*-------------------- END Offset Sidebar ------------------- */
+.btn-align-center {
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-unpublish, .btn-publish {
+  width: 110px;
+}
