@@ -26,6 +26,7 @@ gem 'jquery-rails'
 # gem 'font-awesome-sass', '~> 5.8.1'
 gem 'font_awesome5_rails'
 gem "mini_racer"
+gem "ckeditor"
 
 group :development, :test do
   gem "pry-rails"

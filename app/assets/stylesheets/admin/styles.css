@@ -2832,3 +2832,7 @@ table.dataTable thead td {
 .btn-unpublish, .btn-publish {
   width: 110px;
 }
+
+.post-image {
+  width: 350px;
+}
