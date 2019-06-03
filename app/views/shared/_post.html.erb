@@ -1,5 +1,5 @@
-<article
-    class="clearfix post-default post-grid col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
+<% posts.each do |post| %>
+<article class="clearfix post-default post-grid col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
     <div class="gf-post-inner clearfix">
         <div class="entry-thumb-wrap">
             <div class="entry-thumbnail">
@@ -12,23 +12,20 @@
             <ul class="gf-post-meta list-inline">
                 <li class="meta-date">
                     <a href="#" rel="bookmark">
-                        <i class="far fa-calendar"></i>
-                        <span>2018/11/01</span>
+                        <i class="fa fa-calendar"></i>
+                        <span><%= post.created_at.strftime("%Y-%m-%d") %></span>
                     </a>
                 </li>
             </ul>
             <h4 class="gf-post-title">
-                <a href="#" class="gsf-link">
-                    ジャパン・ベトナム　コネクションからのお知らせ
-                </a>
+                <%= link_to(post) do %>
+                    <%= post.title %>
+                <% end %>
             </h4>
             <div class="gf-post-excerpt">
-                <p>The goal of this new editor is to make adding rich content to WordPress simple and enjoyable. This
-                    whole post is composed of pieces of content—somewhat similar to LEGO bricks—that you can move around
-                    and interact with. Move your cursor around and you’ll notice the different blocks light up with
-                    outlines and arrows. Press the […]
-                </p>
+                <%= raw post.content %>
             </div>
         </div>
     </div>
 </article>
+<% end %>

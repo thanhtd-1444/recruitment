@@ -13,9 +13,7 @@
         <%= render partial: "shared/pagetitle", locals: { pagetitle: 'お気軽にお問い合わせください' } %>
     <div class="container">
         <div class="row">
-                <%= render "shared/post" %>
-                <%= render "shared/post" %>
-                <%= render "shared/post" %>
+            <%= render partial: "shared/post", locals: {posts: @posts} %>
         </div>
     </div>
 </section>
