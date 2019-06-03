@@ -24,6 +24,7 @@ gem 'turbolinks'
 gem "bootstrap", '~>4.0.0'
 gem 'jquery-rails'
 gem "mini_racer"
+gem "ckeditor"
 
 group :development, :test do
   gem "pry-rails"

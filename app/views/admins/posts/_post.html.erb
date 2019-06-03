@@ -1,9 +1,11 @@
 <% posts.each do |post| %>
   <li class="col-lg-12 media mb-4">
-    <%= image_tag "admin/media/media1.jpg", class: "img-fluid mr-4" %>
+    <% if post.image %>
+      <%= image_tag post.image.url, class: "post-image mr-4" %>
+    <% end %>
     <div class="media-body justify-content">
       <h5 class="mb-3"><%= post.title %></h5>
-      <%= post.content %>
+      <%= raw(post.content) %>
     </div>
 
     <div class="col-lg-1 col-md-2 mr-2">
