@@ -21,6 +21,7 @@
 //= require js/owl.carousel.js
 //= require js/owl.animate.js
 //= require js/owl.autoplay.js
+//= require social-share-button
 
 
 
