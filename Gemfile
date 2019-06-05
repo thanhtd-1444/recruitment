@@ -25,6 +25,7 @@ gem "bootstrap", '~>4.0.0'
 gem 'jquery-rails'
 gem "mini_racer"
 gem "ckeditor"
+gem 'social-share-button', '~> 1.2'
 
 group :development, :test do
   gem "pry-rails"

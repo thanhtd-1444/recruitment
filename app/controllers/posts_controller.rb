@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.newest.page(params[:page]).per Settings.posts.per_page
+    @posts = Post.newest.page(params[:page]).per Settings.posts.user_per_page
   end
 
   def show
