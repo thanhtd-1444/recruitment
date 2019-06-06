@@ -20,12 +20,19 @@ gem "ransack"
 gem "ffaker"
 gem "carrierwave"
 gem "carrierwave-base64"
-gem 'turbolinks'
-gem "bootstrap", '~>4.0.0'
-gem 'jquery-rails'
+gem "turbolinks"
+gem "bootstrap", "~>4.0.0"
+gem "jquery-rails"
 gem "mini_racer"
 gem "ckeditor"
-gem 'social-share-button', '~> 1.2'
+gem "social-share-button", "~> 1.2"
+gem "capistrano"
+gem "capistrano3-puma"
+gem "capistrano-rails", require: false
+gem "capistrano-bundler", require: false
+gem "capistrano-rvm"
+gem 'ed25519', '>= 1.2', '< 2.0'
+gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
 
 group :development, :test do
   gem "pry-rails"
