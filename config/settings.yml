@@ -1,4 +1,5 @@
 posts:
   per_page: 5
   user_per_page: 6
+  recent_page: 3
 

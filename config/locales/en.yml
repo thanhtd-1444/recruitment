@@ -35,3 +35,18 @@ en:
       title: 事業内容
     recruitment_benefit:
       title: 外国人採用にはメリット・デメリット
+  posts:
+    show:
+      comments: Comments
+      recent_posts: Recent Posts
+      share: "Share this:"
+  comments:
+    form:
+      submit: Submit
+      remember: Rememberme with next comments
+      name: Name
+      email: Email
+      comment: Comment
+    create:
+      failure: Error! Please try again
+      
