@@ -10,7 +10,8 @@ Category.destroy_all
 
 Admin.create email: "tran.thanh.tam@sun-asterisk.com", password: "Aa@123456789", password_confirmation: "Aa@123456789"
 
-category = Category.create name: "Page"
+category = Category.create name: "Post"
+category = Category.create name: "Recruitment"
 
 15.times.each do |i|
   Post.create(title: "Post #{i}", content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elit", publish_status: :publish, category: category)
