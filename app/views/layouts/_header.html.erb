@@ -1,76 +1,87 @@
 <header id="header">
-<div class="topbar">
+  <div class="topbar">
     <div class="container topbar-wrapper d-flex">
-        <div class="logo">
-            <%= link_to(root_path) do %>
-                <%= image_tag("logo.png", :alt => "homepage") %>
-            <% end %>
+      <div class="logo">
+        <%= link_to(root_path) do %>
+        <%= image_tag("logo.png", :alt => "homepage") %>
+        <% end %>
+      </div>
+      <div class="information">
+        <div>
+          <span class="information-title">お気軽にお問い合わせください。</span>
+          <a class="accent-color" href="tel:0785-31-0291">
+            <i class="fa fa-phone"></i>
+            (+81) 8038391994
+          </a>
         </div>
-        <div class="information">
-            <div>
-                    <span class="information-title">お気軽にお問い合わせください。</span>
-                    <a class="accent-color" href="tel:0785-31-0291">
-                        <i class="fa fa-phone"></i>
-                        (+81) 8038391994
-                    </a>
-            </div>
-            <div>
-                <%= link_to "お問い合わせ", contact_path, class: "button" %>
-            </div>
+        <div>
+          <%= link_to "お問い合わせ", contact_path, class: "button" %>
+        </div>
 
-        </div>
+      </div>
     </div>
-</div>
+  </div>
 
-<nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <div class="navbar-collapse">
+        <div class="gf-toggle-icon">
+          <span>
+
+          </span>
+        </div>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="about.html">ホーム</a>
+            <%= link_to "ホーム", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <a class="nav-link dropdown-toggle" href="services.html">会社概要</a>
-            <div class="sub-menu">
+            <a class="nav-link" href="#">外国人の採用には メリット・デメリット</a>
+            <% if false %>
+              <div class="sub-menu">
                 <a class="dropdown-item" href="portfolio-1-col.html">1 Column Portfolio</a>
                 <a class="dropdown-item" href="portfolio-2-col.html">2 Column Portfolio</a>
                 <a class="dropdown-item" href="portfolio-3-col.html">3 Column Portfolio</a>
                 <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
                 <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
-            </div>
+              </div>
+            <% end %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">事業内容</a>
+            <%= link_to "会社概要", about_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">求人情報</a>
+              <%= link_to "事業内容", contact_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link" href="#">
-                外国人の採用には
+              求人情報
             </a>
           </li>
-          <li class="nav-item">
-              <a class="nav-link dropdown-toggle" href="services.html">
-                  <%= image_tag("jp.png", :alt => "homepage") %>
+        </ul>
+        <% if false %>
+          <ul class="mb0 list-inline">
+            <li class="nav-item">
+              <a class="nav-link dropdown-toggle" href="javascript:;">
+                <%= image_tag("jp.png", :alt => "homepage") %>
               </a>
               <div class="sub-menu language">
-                  <a class="dropdown-item" href="portfolio-1-col.html">
-                      <%= image_tag("jp.png", :alt => "homepage") %>
-                      Vietnamese
-                  </a>
-                  <a class="dropdown-item" href="portfolio-2-col.html">
-                      <%= image_tag("vn.png", :alt => "homepage") %>
-                      English
-                  </a>
-                  <a class="dropdown-item" href="portfolio-3-col.html">
-                      <%= image_tag("gb.png", :alt => "homepage") %>
-                      日本語
-                  </a>
+                <a class="dropdown-item" href="javascript:;">
+                  <%= image_tag("jp.png", :alt => "homepage") %>
+                  Vietnamese
+                </a>
+                <a class="dropdown-item" href="javascript:;">
+                  <%= image_tag("vn.png", :alt => "homepage") %>
+                  English
+                </a>
+                <a class="dropdown-item" href="javascript:;">
+                  <%= image_tag("gb.png", :alt => "homepage") %>
+                  日本語
+                </a>
               </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        <% end %>
       </div>
     </div>
   </nav>
-  </header>
+</header>
