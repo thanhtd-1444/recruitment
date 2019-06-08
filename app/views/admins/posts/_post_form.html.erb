@@ -1,0 +1,27 @@
+<%= form_for [:admins, @post] do |f| %>
+  <%= render "admins/shared/error_messages", object: f.object %>
+
+  <div class="form-group">
+    <%= f.label :title, t(".title"), class: "col-form-label" %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :image, t(".image"), class: "col-form-label" %><br>
+    <%= f.file_field :image %><br>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :content, t(".content"), class: "col-form-label" %><br>
+    <%= f.cktext_area :content, ckeditor: { language: 'us'} %>
+  </div>
+
+  <div class="form-group custom-control custom-checkbox">
+    <%= f.check_box :publish_status, {class: "custom-control-input", id: "customCheck1", checked: true}, :publish, :unpublish %>
+    <%= f.label :publish, t(".publish"), class: "custom-control-label", for: "customCheck1" %><br>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit t(".save"), class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -16,7 +16,7 @@ Rails.application.config.assets.precompile += %w(
   admin/bootstrap.min.js admin/jquery-2.2.4.min.js admin/jquery.slicknav.min.js
   admin/jquery.slimscroll.min.js admin/line-chart.js admin/metisMenu.min.js
   admin/modernizr-2.8.3.min.js admin/owl.carousel.min.js admin/pie-chart.js admin/plugins.js
-  admin/scripts.js admin/popper.min.js
+  admin/scripts.js admin/popper.min.js admin/custom.js
   ckeditor/config.js
 )
 # Precompile additional assets.

@@ -398,7 +398,6 @@
 
 .nav-btn {
     margin-right: 30px;
-    margin-top: 10px;
     cursor: pointer;
 }
 
@@ -643,18 +642,6 @@
     padding: 0 30px;
     background: #fff;
     position: relative;
-}
-
-.page-title-area:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 4px;
-    height: 36px;
-    background: var(--primary-color);
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
 }
 
 .page-title {
@@ -2835,4 +2822,5 @@ table.dataTable thead td {
 
 .post-image {
   width: 350px;
+  max-height: 225px;
 }

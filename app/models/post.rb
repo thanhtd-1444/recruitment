@@ -9,4 +9,5 @@ class Post < ApplicationRecord
   scope :newest, ->{order created_at: :desc}
 
   validates :title, presence: true, uniqueness: true
+  validates :content, presence: true
 end

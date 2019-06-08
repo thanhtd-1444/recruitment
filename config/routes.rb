@@ -14,6 +14,10 @@ Rails.application.routes.draw do
 
   namespace :admins do
     resources :home, only: :index
-    resources :posts
+    resources :posts do
+      member do
+        get :publish
+      end
+    end
   end
 end
