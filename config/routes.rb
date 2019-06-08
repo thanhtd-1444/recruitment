@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "/about", to: "static_pages#about"
   get "/contact", to: "static_pages#contact"
   resources :posts, only: [:show, :index]
+  resources :specific_skills, only: :index
 
   devise_for :admins, controllers: {sessions: "admins/sessions", passwords: "admins/passwords"}
 
