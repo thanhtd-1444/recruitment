@@ -3,7 +3,7 @@
 
   .page-title {
     margin-bottom: 0;
-    font-size: 55px;
+    font-size: 30px;
   }
 }
 
@@ -183,7 +183,7 @@
 
   label,
   h5 {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   label {
@@ -193,10 +193,6 @@
 
   &.multiple {
     align-items: unset;
-
-    label {
-      margin-right: 30px;
-    }
 
     ul {
       font-size: 18px;
@@ -270,4 +266,12 @@
   .info-manager {
     font-size: 20px;
   }
+}
+
+.th-table-bussiness-content {
+  width: 200px;
+}
+
+.lbl-about-us {
+  width: 150px;
 }

@@ -30,3 +30,8 @@ en:
       publish:
         success: "%{action} '%{post}' successfully"
         failure: "%{action} '%{post}' failure"
+  static_pages:
+    bussiness_content:
+      title: 事業内容
+    recruitment_benefit:
+      title: 外国人採用にはメリット・デメリット
