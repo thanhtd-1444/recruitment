@@ -2835,4 +2835,5 @@ table.dataTable thead td {
 
 .post-image {
   width: 350px;
+  max-height: 225px;
 }

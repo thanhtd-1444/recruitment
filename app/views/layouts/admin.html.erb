@@ -61,7 +61,12 @@
                   </div>
               </div>
           </div>
-          <%= yield %>
+          
+          <%= render "layouts/flash" %>
+
+          <div class="main-content-inner">
+            <%= yield %>
+          </div>
         </div>
         <%= render "layouts/footer_admin" %>
     </div>

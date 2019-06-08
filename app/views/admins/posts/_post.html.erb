@@ -10,13 +10,13 @@
 
     <div class="col-lg-1 col-md-2 mr-2">
       <div class="btn-align-center row">
-        <%= button_tag "", class: "btn btn-outline-info btn-xs mb-3 mr-1" do %>
+        <%= link_to post_path(post), class: "btn btn-outline-info btn-xs mb-3 mr-1" do %>
           <span class="fa fa-eye"></span>
         <% end %>
-        <%= button_tag "", class: "btn btn-outline-primary btn-xs mb-3 mr-1" do %>
+        <%= link_to edit_admins_post_path(post), class: "btn btn-outline-primary btn-xs mb-3 mr-1" do %>
           <span class="fa fa-edit"></span>
         <% end %>
-        <%= button_tag "", class: "btn btn-outline-danger btn-xs mb-3 mr-1" do %>
+        <%= link_to admins_post_path(post), method: :delete, class: "btn btn-outline-danger btn-xs mb-3 mr-1" do %>
           <span class="fa fa-trash-o"></span>
         <% end %>
       </div>
@@ -25,12 +25,12 @@
         <% if post.publish? %>
           <%= button_tag "", class: "btn btn-outline-warning btn-xs mb-3 btn-unpublish" do %>
             <span class="fa fa-tv"></span>
-            <b>Unpublish</b>
+            <b><%= t(".unpublish") %></b>
           <% end %>
         <% else %>
           <%= button_tag "", class: "btn btn-outline-success btn-xs mb-3 btn-publish" do %>
             <span class="fa fa-tv"></span>
-            <b>Publish</b>
+            <b><%= t(".publish") %></b>
           <% end %>
         <% end %>
       </div>

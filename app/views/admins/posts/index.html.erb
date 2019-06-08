@@ -1,20 +1,17 @@
-<div class="main-content-inner">
-  <div class="row">
-      <div class="mt-5">
-        <div class="card">
-          <div class="card-body">
-            <%= link_to new_admins_post_path, class: "btn btn-outline-primary" do %>
-              <span class="fa fa-plus-circle"></span>
-              Create
-            <% end %>
-            <br><br>
-            <ul class="row list-unstyled">
-              <%= render partial: "post", locals: {posts: @posts} %>
-            </ul>
-            <div>
-              <%= paginate @posts %>
-            </div>
-          </div>
+<div class="row">
+  <div class="mt-5">
+    <div class="card">
+      <div class="card-body">
+        <%= link_to new_admins_post_path, class: "btn btn-outline-primary" do %>
+          <span class="fa fa-plus-circle"></span>
+          <%= t ".create" %>
+        <% end %>
+        <br><br>
+        <ul class="row list-unstyled">
+          <%= render partial: "post", locals: {posts: @posts} %>
+        </ul>
+        <div>
+          <%= paginate @posts %>
         </div>
       </div>
     </div>

@@ -1,0 +1,9 @@
+<% if flash.any? %>
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>" role="alert">
+      <p class="inner-content">
+        <span class="text-inside"><%= value.html_safe %></span>
+      </p>
+    </div>
+  <% end %>
+<% end %>
