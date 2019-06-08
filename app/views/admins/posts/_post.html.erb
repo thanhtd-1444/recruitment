@@ -23,12 +23,12 @@
 
       <div class="row btn-align-center">
         <% if post.publish? %>
-          <%= button_tag "", class: "btn btn-outline-warning btn-xs mb-3 btn-unpublish" do %>
+          <%= link_to publish_admins_post_path(id: post.id, publish_status: :unpublish), class: "btn btn-outline-warning btn-xs mb-3 btn-unpublish" do %>
             <span class="fa fa-tv"></span>
             <b><%= t(".unpublish") %></b>
           <% end %>
         <% else %>
-          <%= button_tag "", class: "btn btn-outline-success btn-xs mb-3 btn-publish" do %>
+          <%= link_to publish_admins_post_path(id: post.id, publish_status: :publish), class: "btn btn-outline-success btn-xs mb-3 btn-publish" do %>
             <span class="fa fa-tv"></span>
             <b><%= t(".publish") %></b>
           <% end %>

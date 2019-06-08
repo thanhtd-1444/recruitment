@@ -27,3 +27,6 @@ en:
       destroy:
         success: Delete Post successfully
         failure: Delete Post failure
+      publish:
+        success: "%{action} '%{post}' successfully"
+        failure: "%{action} '%{post}' failure"

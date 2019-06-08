@@ -49,6 +49,16 @@ class Admins::PostsController < Admins::BaseController
     redirect_to admins_posts_path
   end
 
+  def publish
+    if @post.update publish_status: params[:publish_status]
+      flash[:success] = t(".success", action: params[:publish_status].camelize, post: @post.title)
+    else
+      flash[:danger] = t(".failure", action: params[:publish_status].camelize, post: @post.title)
+    end
+
+    redirect_to admins_posts_path
+  end
+
   private
 
   def post_params
