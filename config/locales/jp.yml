@@ -1,0 +1,61 @@
+en:
+  record:
+    not_found: " %{object_name} not found"
+  admins:
+    posts:
+      edit:
+        title: Edit post information
+      new:
+        title: Create new post
+      post_form:
+        title: Post title
+        image: Post image
+        content: Post content
+        publish: Publish?
+        save: Save
+      post:
+        publish: Publish
+        unpublish: Unpublish
+      index:
+        create: Create
+      create:
+        success: Create Post successfully
+        failure: Create Post failure
+      update:
+        success: Update Post successfully
+        failure: Update Post failure
+      destroy:
+        success: Delete Post successfully
+        failure: Delete Post failure
+      publish:
+        success: "%{action} '%{post}' successfully"
+        failure: "%{action} '%{post}' failure"
+  static_pages:
+    bussiness_content:
+      title: 事業内容
+    recruitment_benefit:
+      title: 外国人採用にはメリット・デメリット
+    home:
+      btn_all_job: See All Jobs
+
+  posts:
+    show:
+      comments: Comments
+      recent_posts: Recent Posts
+      share: "Share this:"
+  comments:
+    form:
+      submit: Submit
+      remember: Rememberme with next comments
+      name: Name
+      email: Email
+      comment: Comment
+    create:
+      failure: Error! Please try again
+  jobs:
+    job_item:
+      amount: 募集人数
+      job_detail: 仕事の内容
+      location: 勤務地
+      salary: 給料
+      duration: 募集期間 

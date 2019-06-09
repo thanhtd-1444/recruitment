@@ -2,7 +2,7 @@
     <div class="job-header">
         <div class="job-detail col-md-3">
            <strong>
-                <%= t ".job-detail"%>
+                <%= t ".job_detail"%>
            </strong>
         </div>
         <div class="job-amount col-md-3">
@@ -28,25 +28,25 @@
     </div>
     <% jobs.each do |job| %>
         <div class="job-item">
-                <div class="job-detail col-md-3">
-                    <%= link_to job do %>
-                        <%= job.title %>
-                    <% end %>
-                </div>
-                <div class="job-amount col-md-3">
-                <%= job.quantity %>
-                </div>
-                <div class="job-location col-md-2">
-                <%= job.place %>
-                </div>
-                <div class="job-salary col-md-2">
-                <%= job.salary %>
-                </div>
-                <div class="meta-date col-md-2">
-                    <%= job.start_date.strftime("%Y/%m/%d") %>
-                    -
-                    <%= job.end_date.strftime("%Y/%m/%d") %>
-                </div>
+            <div class="job-detail col-md-3">
+                <%= link_to job do %>
+                    <%= job.title %>
+                <% end %>
+            </div>
+            <div class="job-amount col-md-3">
+            <%= job.quantity %>
+            </div>
+            <div class="job-location col-md-2">
+            <%= job.place %>
+            </div>
+            <div class="job-salary col-md-2">
+            <%= job.salary %>
+            </div>
+            <div class="meta-date col-md-2">
+                <%= job.start_date.strftime("%Y/%m/%d") %>
+                -
+                <%= job.end_date.strftime("%Y/%m/%d") %>
+            </div>
         </div>
     <% end %>
 </div>
