@@ -10,5 +10,8 @@ class PostsController < ApplicationController
       else
         Post.publish.find_by id: params[:id]
       end
+    @recent_posts = Post.publish.newest.limit(Settings.posts.recent_page)
+    @comments = @post.comments.page(params[:page]).per Settings.posts.recent_page
+    @comment = @post.comments.new
   end
 end

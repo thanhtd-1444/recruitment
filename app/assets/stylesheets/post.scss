@@ -1,3 +1,7 @@
+.post-default {
+  margin-bottom: 30px;
+}
+
 .gf-post-inner {
   .gf-post-excerpt {
     height: 2.5rem;
@@ -21,7 +25,14 @@
 
   .entry-thumbnail {
     position: relative;
+    height: 230px;
 
+    .entry-thumbnail-overlay {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+    }
     .entry-thumbnail-overlay:after {
       content: '';
       display: block;
@@ -160,70 +171,6 @@
   }
 }
 
-.recent-posts-widget {
-
-  padding-bottom: 30px;
-
-  .recent-post {
-    display: flex;
-    align-items: center;
-    padding: 10px 0;
-
-    +.recent-post {
-      border-top: 1px dashed #ebebeb;
-
-    }
-  }
-
-  .gf-post-content {
-    padding-left: 10px;
-  }
-
-  .gf-post-title {
-    color: #444;
-    margin-bottom: 10px;
-  }
-
-  .gf-meta-date {
-    color: #ababab;
-  }
-
-  .gf-post-image {
-    img {
-      width: 100px;
-    }
-  }
-}
-
-.widget-title {
-  font-size: 24px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.3;
-  letter-spacing: normal;
-  color: #444;
-  padding-bottom: 14px;
-  border-bottom: 1px solid #f8f8f8;
-  margin: 0 0 10px;
-}
-
-.search-form {
-  position: relative;
-
-  .search-submit {
-    position: absolute;
-    width: 40px;
-    height: 48px;
-    top: 0;
-    right: 0;
-    background: 0 0;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-  }
-}
-
 // Grid Blogs
 
 .blog-grid {
@@ -279,16 +226,21 @@
     top: -1px;
     position: relative;
   }
+
+  textarea {
+    min-height: 200px;
+  }
 }
 
 .gf-entry-content {
+  padding-bottom: 30px;
   border-bottom: 1px solid #f8f8f8;
+  font-size: 18px;
 }
 
 .social-share-wrapper {
   padding: 10px 0;
-  border-top: 1px solid #ebebeb;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid #f8f8f8;
   margin-top: 10px;
 
   p {

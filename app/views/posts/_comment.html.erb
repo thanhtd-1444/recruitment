@@ -1,27 +1,21 @@
-<div class="new-comment-form pt30" data-aos="fade-up">
-     <h3 class="ml15">Leave a Reply</h3>
-     <form action="" class="comment-form">
-         <div class="form-group col-md-6">
-             <label for="">Name</label>
-             <input type="text" class="form-control">
-         </div>
-         <div class="form-group col-md-6">
-             <label for="">Email</label>
-             <input type="text" class="form-control">
-         </div>
-
-          <div class="form-group col-md-12">
-             <label for="">Comment</label>
-             <textarea type="text" class="form-control"></textarea>
-         </div>
-         <div class="form-group col-md-12">
-             <input type="checkbox" id="rememberMe">
-             <label for="rememberMe">Rememberme with next comments</label>
-         </div>
-         <div class="form-group ml10">
-             <button class="button" type="submit">
-                 Submit
-             </button>
-         </div>
-     </form>
- </div> 
+<% comments.each do |comment| %>
+	<div class="comment-item">
+		<div class="gf-comment-inner clearfix">
+			<div class="comment-avatar">
+				<%= image_tag("user.png", :alt => "user-image") %>
+				<div>
+					<h5 class="mb0"><%= comment.user_name %></h5>
+					<span class="meta-date">
+						<%= comment.created_at.strftime("%Y-%m-%d") %>
+						at <%= comment.created_at.strftime("%I:%M%p") %>
+					</span>
+				</div>
+			</div>
+			<div class="gf-comment-content">
+				<p class="mb0">
+					<%= comment.content %>
+				</p>
+			</div>
+		</div>
+	</div>
+<% end %>

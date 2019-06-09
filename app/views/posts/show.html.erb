@@ -1,43 +1,51 @@
 <div class="container gf-post-detail">
-   <%= render partial: "shared/page_header", locals: { title: @post.title } %>
-   <div class="row">
-       <div class="col-md-9 gf-post-detail">
-           <ul class="gf-post-meta list-inline">
-               <li class="meta-date">
-                <%= @post.created_at.strftime("%Y-%m-%d") %>
-            </li>
-            <li>999 comments</li>
-        </ul>
+	<div class="row">
+		<%= render partial: "shared/page_header", locals: { title: @post.title } %>
+	</div>
+	<div class="row">
+		<div class="gf-post-detail">
+			<ul class="gf-post-meta list-inline">
+				<li class="meta-date">
+					<%= @post.created_at.strftime("%Y-%m-%d") %>
+				</li>
+				<li><%= @comments.count %> comments</li>
+			</ul>
+			<% if @post.image.url != "fallback/default.jpg" %>
+				<%= image_tag @post.image.url, class: "post-image mb10" %>
+			<% end %>
 
-        <div class="clearfix gf-entry-content">
-           <%= raw @post.content %>
-       </div>
+			<div class="clearfix gf-entry-content">
+				<%= raw @post.content %>
+			</div>
 
-      <div class="social-share-wrapper d-flex">
-        <p>Share this: </p>
-        <%= social_share_button_tag(@post.title) %>
-      </div>
-       <div class="gf-post-comments">
-           <%= render partial: "comment" %>
-       </div>
-   </div>
-   <div class="gf-righ-sidebar col-md-3">
-       <aside class="widget-search">
-           <form role="search" method="get" class="search-form">
-               <input type="search" class="form-control" placeholder="Search …" value="" name="s">
-               <button type="submit" class="search-submit">
-                   <i class="fa fa-search"></i>
-               </button>
-           </form>
-       </aside>
+			<div class="social-share-wrapper d-flex">
+				<p>
+					<%= t ".share" %>
+				</p>
+				<%= social_share_button_tag(@post.title) %>
+			</div>
 
-       <aside class="recent-posts-widget">
-           <h4 class="widget-title">Recent Posts</h4>
-           <%= render partial: "recent_posts", locals: { title: 'お問い合わせ', date: "2019/01/01" } %>
-           <%= render partial: "recent_posts", locals: { title: 'お問い合わせ', date: "2019/01/01" } %>
-           <%= render partial: "recent_posts", locals: { title: 'お問い合わせ', date: "2019/01/01" } %>
-           <%= render partial: "recent_posts", locals: { title: 'お問い合わせ', date: "2019/01/01" } %>
-       </aside>
-   </div>
-</div>
+			<div class="recent-posts mt30">
+				<h3 class="ml15">
+					<%= t ".recent_posts" %>
+				</h3>
+				<div class="blog-grid">
+					<%= render partial: "shared/post", locals: {posts: @recent_posts} %>
+				</div>
+			</div>
+			<% if @post.comments.count > 0 %>
+				<div class="comment-wrapper">
+					<h3>
+						<%= t ".comments" %>
+					</h3>
+					<%= render partial: "comment", locals: {comments: @comments} %>
+					<%= paginate @comments %>
+				</div>
+			<% end %>
+
+			<div class="gf-post-comments">
+				<%= render partial: "comments/form" %>
+			</div>
+		</div>
+	</div>
 </div>

@@ -1,31 +1,40 @@
 <% posts.each do |post| %>
-<article class="clearfix post-default post-grid col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
-    <div class="gf-post-inner clearfix">
-        <div class="entry-thumb-wrap">
-            <div class="entry-thumbnail">
-                <a href="#" class="entry-thumbnail-overlay">
-                    <%= image_tag("post-1.jpg", :alt => "homepage") %>
-                </a>
-            </div>
-        </div>
-        <div class="gf-post-content">
-            <ul class="gf-post-meta list-inline">
-                <li class="meta-date">
-                    <a href="#" rel="bookmark">
-                        <i class="fa fa-calendar"></i>
-                        <span><%= post.created_at.strftime("%Y-%m-%d") %></span>
-                    </a>
-                </li>
-            </ul>
-            <h4 class="gf-post-title">
-                <%= link_to(post) do %>
-                    <%= post.title %>
-                <% end %>
-            </h4>
-            <div class="gf-post-excerpt">
-                <%= raw post.content %>
-            </div>
-        </div>
-    </div>
-</article>
+	<article class="clearfix post-default post-grid col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
+		<div class="gf-post-inner clearfix">
+			<div class="entry-thumb-wrap">
+				<div class="entry-thumbnail">
+					<% if post.image.url != "fallback/default.jpg" %>
+						<%= link_to post_path(post),
+							class: "entry-thumbnail-overlay",
+							style: "background-image: url(#{post.image.url})" do %>
+						<% end %>
+					<% else %>
+						<%= link_to post_path(post),
+								class: "entry-thumbnail-overlay",
+								style: "background-image: url(#{image_path "post-1.jpg"})" do 
+						%>
+						<% end %>
+					<% end %>
+				</div>
+			</div>
+			<div class="gf-post-content">
+				<ul class="gf-post-meta list-inline">
+					<li class="meta-date">
+						<a href="#" rel="bookmark">
+							<i class="fa fa-calendar"></i>
+							<span><%= post.created_at.strftime("%Y-%m-%d") %></span>
+						</a>
+					</li>
+				</ul>
+				<h4 class="gf-post-title">
+					<%= link_to(post) do %>
+					<%= post.title %>
+					<% end %>
+				</h4>
+				<div class="gf-post-excerpt">
+					<%= raw post.content %>
+				</div>
+			</div>
+		</div>
+	</article>
 <% end %>

@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2019_06_09_083905) do
     t.bigint "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email"
     t.index ["post_id"], name: "index_comments_on_post_id"
   end
 
