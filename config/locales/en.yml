@@ -35,6 +35,9 @@ en:
       title: 事業内容
     recruitment_benefit:
       title: 外国人採用にはメリット・デメリット
+    home:
+      btn_all_job: See All Jobs
+
   posts:
     show:
       comments: Comments
@@ -49,4 +52,13 @@ en:
       comment: Comment
     create:
       failure: Error! Please try again
+  jobs:
+    job_item:
+      amount: Quantity
+      job_detail: Job Detail
+      location: Location
+      salary: Salary
+      duration: Duration
+
+
       

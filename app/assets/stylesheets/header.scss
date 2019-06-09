@@ -55,12 +55,14 @@ header {
                 visibility: hidden;
                 opacity: 0;
                 box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.15);
+                flex-flow: column;
 
-                .dropdown-item {
+                .dropdown-link {
                     white-space: nowrap;
                     padding-left: 20px;
                     padding-right: 20px;
                     transition: all .3s;
+                    color: #333;
                 }
             }
 
@@ -68,11 +70,10 @@ header {
                 min-width: 210px;
                 text-align: center;
 
-                .dropdown-item {
+                .dropdown-link {
                     line-height: 38px;
 
                     &:hover {
-                        margin-left: 5px;
                         color: $theme-color;
                     }
                 }

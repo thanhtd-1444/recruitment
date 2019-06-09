@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   get "/contact", to: "static_pages#contact"
   get "/bussiness_content", to: "static_pages#bussiness_content"
   get "/recruitment_benefit", to: "static_pages#recruitment_benefit"
-  
+  get "/skills", to: "static_pages#specific_skills"
+
+  resources :jobs, only: [:show, :index]
   resources :specific_skills, only: :index
   resources :posts, only: [:show, :index] do
     resources :comments

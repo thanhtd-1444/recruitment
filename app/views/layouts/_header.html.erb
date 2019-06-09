@@ -26,9 +26,7 @@
     <div class="container">
       <div class="navbar-collapse">
         <div class="gf-toggle-icon">
-          <span>
-
-          </span>
+          <span></span>
         </div>
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -36,16 +34,6 @@
           </li>
           <li class="nav-item">
             <%= link_to "外国人の採用には メリット・デメリット", recruitment_benefit_path, class: "nav-link" %>
-
-            <% if false %>
-              <div class="sub-menu">
-                <a class="dropdown-item" href="portfolio-1-col.html">1 Column Portfolio</a>
-                <a class="dropdown-item" href="portfolio-2-col.html">2 Column Portfolio</a>
-                <a class="dropdown-item" href="portfolio-3-col.html">3 Column Portfolio</a>
-                <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
-                <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
-              </div>
-            <% end %>
           </li>
           <li class="nav-item">
             <%= link_to "会社概要", about_path, class: "nav-link" %>
@@ -57,9 +45,12 @@
               <%= link_to "事業内容", bussiness_content_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" href="#">
+            <a class="nav-link dropdown-toggle" href="javascript:;">
               求人情報
             </a>
+            <div class="sub-menu d-flex">
+                <%= link_to "特定技能", skills_path, class: "dropdown-link" %>
+            </div>
           </li>
         </ul>
         <% if false %>
