@@ -86,7 +86,6 @@
   }
 }
 
-
 .gf-banner-inner .entry-thumbnail::before {
   position: absolute;
   top: 0;
@@ -105,6 +104,11 @@
 .gf-banner-inner .entry-thumbnail:hover::before {
   -webkit-animation: shine .75s;
   animation: shine .75s;
+}
+
+.img-banner {
+  width: 255px;
+  height: 150px;
 }
 
 @-webkit-keyframes shine {

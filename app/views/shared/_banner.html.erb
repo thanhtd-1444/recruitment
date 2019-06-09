@@ -9,7 +9,7 @@
             <div class="entry-thumb-wrap">
                 <div class="entry-thumbnail">
                     <%= link_to specific_skills_path, class: "entry-thumbnail-overlay" do %>
-                        <img src="https://picsum.photos/300/200?image=244" />
+                        <%= image_tag "home/specific_skill.jpg", class: "img-banner" %>
                     <% end %>
                 </div>
             </div>
@@ -18,15 +18,15 @@
     <article class="clearfix gf-banner col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
         <div class="gf-heading">
             <h4 class="heading-title">
-                技術・人文知識・国際業業務
+                エンジニア・通訳
             </h4>
         </div>
         <div class="gf-banner-inner clearfix">
             <div class="entry-thumb-wrap">
                 <div class="entry-thumbnail">
-                    <a href="#" class="entry-thumbnail-overlay">
-                        <img src="https://picsum.photos/300/200?image=1024" />
-                    </a>
+                  <%= link_to "#", class: "entry-thumbnail-overlay" do %>
+                      <%= image_tag "home/specific_engineer.jpg", class: "img-banner" %>
+                  <% end %>
                 </div>
             </div>
         </div>
@@ -40,9 +40,11 @@
         <div class="gf-banner-inner clearfix">
             <div class="entry-thumb-wrap">
                 <div class="entry-thumbnail">
-                    <a href="#" class="entry-thumbnail-overlay">
-                        <img src="https://picsum.photos/300/200?image=611" />
-                    </a>
+                  <div class="entry-thumbnail">
+                    <%= link_to "#", class: "entry-thumbnail-overlay" do %>
+                        <%= image_tag "home/intern.jpg", class: "img-banner"  %>
+                    <% end %>
+                  </div>
                 </div>
             </div>
         </div>
@@ -56,9 +58,11 @@
         <div class="gf-banner-inner clearfix">
             <div class="entry-thumb-wrap">
                 <div class="entry-thumbnail">
-                    <a href="#" class="entry-thumbnail-overlay">
-                        <img src="https://picsum.photos/300/200?image=244" />
-                    </a>
+                  <div class="entry-thumbnail">
+                    <%= link_to "#", class: "entry-thumbnail-overlay" do %>
+                        <%= image_tag "home/study_abroad.jpg", class: "img-banner"  %>
+                    <% end %>
+                  </div>
                 </div>
             </div>
         </div>
