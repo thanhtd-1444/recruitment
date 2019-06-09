@@ -1,0 +1,277 @@
+.gf-page-heading {
+  padding: 50px 0;
+
+  .page-title {
+    margin-bottom: 0;
+    font-size: 30px;
+  }
+}
+
+// Contact Page
+
+.contact-info {
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  padding: 50px 0;
+
+  .info-content {
+    padding: 0 15px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .left {
+    font-size: 45px;
+    color: #7fa15a;
+  }
+
+  .right {
+    margin-left: 20px;
+
+    h6 {
+      color: #7fa15a;
+      font-size: 17px;
+    }
+
+    p {
+      color: #959595;
+    }
+  }
+}
+
+
+// Back to Top
+.back-to-top {
+  position: fixed;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  backface-visibility: visible;
+  bottom: 10px;
+  right: 10px;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  z-index: 2;
+  -webkit-transform: translateX(100px);
+  -moz-transform: translateX(100px);
+  -ms-transform: translateX(100px);
+  -o-transform: translateX(100px);
+  transform: translateX(100px);
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  color: #fff;
+  background-color: $theme-color;
+
+  &.in {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+
+//Pagination
+
+.pagination {
+  justify-content: center;
+
+  .page-item {
+
+    .page-link {
+      border-radius: 0;
+      color: $theme-color;
+      padding: 0.7rem 1rem;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    &.active {
+      .page-link {
+        background-color: $theme-color;
+        border-color: $theme-color;
+        color: $white;
+      }
+    }
+  }
+}
+
+
+//Shared Button
+
+.social-share-button .ssb-icon {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+}
+
+.social-share-button .ssb-twitter {
+  background-image: image-url("social-share-button/twitter.svg");
+
+}
+
+.social-share-button .ssb-facebook {
+  background-image: image-url("social-share-button/facebook.svg");
+}
+
+.social-share-button .ssb-google_bookmark {
+  background-image: image-url("social-share-button/google_bookmark.svg");
+}
+
+.social-share-button .ssb-google_plus {
+  background-image: image-url("social-share-button/google_plus.svg");
+}
+
+.social-share-button .ssb-linkedin {
+  background-image: image-url("social-share-button/linkedin.svg");
+}
+
+.social-share-button .ssb-tumblr {
+  background-image: image-url("social-share-button/tumblr.svg");
+}
+
+.social-share-button .ssb-pinterest {
+  background-image: image-url("social-share-button/pinterest.svg");
+}
+
+.social-share-button .ssb-email {
+  background-image: image-url("social-share-button/email.svg");
+}
+
+.social-share-button .ssb-reddit {
+  background-image: image-url("social-share-button/reddit.svg");
+}
+
+.social-share-button .ssb-hacker_news {
+  background-image: image-url("social-share-button/hacker_news.svg");
+}
+
+.social-share-button .ssb-telegram {
+  background-image: image-url("social-share-button/telegram.svg");
+}
+
+.social-share-button .ssb-whatsapp_app,
+.social-share-button .ssb-whatsapp_web {
+  background-image: image-url("social-share-button/whatsapp.svg");
+}
+
+
+// About us Page
+.info-wrapper {
+  display: flex;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  align-items: center;
+
+  >* {
+    margin-bottom: 0;
+  }
+
+  label,
+  h5 {
+    font-size: 17px;
+  }
+
+  label {
+    margin-right: 10px;
+    color: $theme-color;
+  }
+
+  &.multiple {
+    align-items: unset;
+
+    ul {
+      font-size: 18px;
+      list-style: none;
+    }
+
+    li i {
+      color: $theme-color;
+    }
+  }
+}
+
+.about-wrapper {
+  .info-title {
+    padding: 30px 0;
+    margin-top: 30px;
+
+    h2 {
+      text-align: center;
+
+      &:after {
+        content: "";
+        height: 2px;
+        background-color: $theme-color;
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  .info-image {
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+
+    .bg-image {
+      padding-bottom: 30%;
+      width: 50%;
+      background-image: image-url("sakura.jpg");
+      background-size: cover;
+    }
+
+    .content {
+      padding: 0 30px;
+      width: 50%;
+      font-size: 20px;
+    }
+  }
+
+  .info-icon {
+    .content-wrapper {
+      flex-flow: row wrap;
+      justify-content: space-around;
+    }
+
+    .content {
+      img {
+        width: 100px;
+      }
+
+      p {
+        line-height: 38px;
+      }
+
+      font-size: 18px;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+
+  .info-manager {
+    font-size: 20px;
+  }
+}
+
+.th-table-bussiness-content {
+  width: 200px;
+}
+
+.lbl-about-us {
+  width: 150px;
+}

@@ -1,0 +1,121 @@
+@media screen and (max-width: 991px) {
+  .contact-info {
+    .info-content {
+      justify-content: flex-start;
+    }
+
+    .content-wrapper {
+      margin-bottom: 30px;
+    }
+  }
+
+  .about-wrapper {
+    .info-image {
+      flex-flow: column wrap;
+      margin-top: 60px;
+
+      .bg-image {
+        width: 100%;
+        padding-bottom: 50%;
+      }
+
+      .content {
+        width: 100%;
+        padding: 0;
+        padding-top: 30px;
+      }
+    }
+  }
+
+  // Header
+
+  header {
+    .navbar {
+      .navbar-collapse {
+        .navbar-nav {
+          position: absolute;
+          z-index: 999;
+          flex-flow: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          display: flex;
+          background: $white;
+          width: 330px;
+          opacity: 0;
+          visibility: hidden;
+          top: 60px;
+          border-bottom: 2px solid $theme-color;
+          box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.15);
+
+          .nav-item {
+            width: 100%;
+
+            &::after {
+              content: "";
+              display: block;
+              width: 90%;
+              height: 1px;
+              background: #ebebeb;
+              left: 19px;
+              position: relative;
+            }
+
+            &:last-child:after {
+              content: none;
+            }
+          }
+
+          .nav-link {
+            color: #333;
+
+            &:hover {
+              color: $theme-color;
+              margin-left: 5px;
+              transition: all .3s;
+            }
+          }
+        }
+
+        &.collapsed {
+          .navbar-nav {
+            opacity: 1;
+            visibility: visible;
+            animation-name: fadeInUp;
+            -webkit-animation-name: fadeInUp;
+            animation-duration: .5s;
+            -webkit-animation-duration: .5s;
+            animation-fill-mode: both;
+            -webkit-animation-fill-mode: both;
+          }
+
+          .gf-toggle-icon {
+            span {
+              background-color: transparent;
+
+              &::after,
+              &::before {
+                -webkit-transition: top .3s ease-in-out, -webkit-transform .3s .5s ease-in-out, background .3s;
+                -moz-transition: top .3s ease-in-out, -moz-transform .3s .5s ease-in-out, background .3s;
+                transition: top .3s ease-in-out, transform .3s .5s ease-in-out, background .3s;
+                top: 0;
+              }
+
+              &::after {
+                transform: rotate3d(0, 0, 1, -45deg);
+              }
+
+              &::before {
+                transform: rotate3d(0, 0, 1, 45deg);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .gf-toggle-icon {
+    display: inline-block;
+    visibility: visible;
+  }
+}

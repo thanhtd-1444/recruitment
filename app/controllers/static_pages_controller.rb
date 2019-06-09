@@ -12,4 +12,6 @@ class StaticPagesController < ApplicationController
   def bussiness_content; end
 
   def recruitment_benefit; end
+
+  def recruitment_market; end
 end

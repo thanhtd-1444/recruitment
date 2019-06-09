@@ -1,0 +1,209 @@
+header {
+
+    &.sticky {
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+    }
+
+    nav.navbar-dark {
+        padding: 0;
+        min-height: 60px;
+        background-color: $theme-color;
+
+        .navbar-toggler {
+            color: #fff;
+            border-color: transparent;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .navbar-nav {
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            padding: 20px;
+        }
+
+        .navbar-nav {
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .nav-item {
+            position: relative;
+
+            .sub-menu {
+                transition: all .5s ease-out;
+                overflow: hidden;
+                background: #fff;
+                position: absolute;
+                z-index: 9999;
+                animation-name: fadeOutDown;
+                animation-duration: .5s;
+                font-size: 15px;
+                border-bottom: 2px solid $theme-color;
+                visibility: hidden;
+                opacity: 0;
+                box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.15);
+
+                .dropdown-item {
+                    white-space: nowrap;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    transition: all .3s;
+                }
+            }
+
+            .sub-menu:not(.language) {
+                min-width: 210px;
+                text-align: center;
+
+                .dropdown-item {
+                    line-height: 38px;
+
+                    &:hover {
+                        margin-left: 5px;
+                        color: $theme-color;
+                    }
+                }
+            }
+
+            .language {
+                a {
+                    padding: 5px 5px 5px 0;
+                }
+            }
+
+            &:hover {
+                .sub-menu {
+                    animation-name: fadeInUp;
+                    -webkit-animation-name: fadeInUp;
+                    transition: all .5s ease-in;
+                    visibility: visible;
+                    animation-duration: .5s;
+                    -webkit-animation-duration: .5s;
+                    opacity: 1;
+                    animation-fill-mode: both;
+                    -webkit-animation-fill-mode: both;
+                }
+            }
+
+            &:last-child {
+                font-size: 15px;
+            }
+        }
+    }
+
+
+}
+
+.topbar-wrapper {
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    padding: 20px;
+
+    .information {
+        display: flex;
+        align-items: center;
+
+        .information-title {
+            color: $theme-color;
+            display: block;
+        }
+
+        a {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 10px;
+
+            i {
+                position: relative;
+                top: 3px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .logo {
+        img {
+            height: 100px;
+        }
+    }
+}
+
+.gf-heading {
+    text-align: center;
+    padding: 20px 0;
+
+    .heading-sub-title {
+        color: $theme-color;
+    }
+}
+
+.gf-toggle-icon {
+    cursor: pointer;
+    display: none;
+    visibility: hidden;
+    width: 26px;
+    height: 30px;
+    position: relative;
+    vertical-align: middle;
+
+    span {
+        bottom: 0;
+        display: block;
+        width: 15px;
+        height: 2px;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        background-color: #fff;
+
+        &::before,
+        &::after {
+            content: '';
+            height: 2px;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: -6px;
+            -webkit-transition: all .3s;
+            -moz-transition: all .3s;
+            -ms-transition: all .3s;
+            -o-transition: all .3s;
+            transition: all .3s;
+            -webkit-transform-origin: 50% 50%;
+            -moz-transform-origin: 50% 50%;
+            -ms-transform-origin: 50% 50%;
+            -o-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            background-color: #fff;
+        }
+
+        &::after {
+            top: -6px;
+        }
+
+        &::before {
+            top: 6px;
+        }
+    }
+}
