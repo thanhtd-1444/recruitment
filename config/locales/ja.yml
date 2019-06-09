@@ -1,4 +1,4 @@
-en:
+ja:
   record:
     not_found: " %{object_name} not found"
   admins:
@@ -58,4 +58,4 @@ en:
       job_detail: 仕事の内容
       location: 勤務地
       salary: 給料
-      duration: 募集期間 
+      duration: 募集期間
