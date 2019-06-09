@@ -1,4 +1,15 @@
 <%= render "layouts/slider" %>
+
+<section class="gf-jobs">
+     <div class="container">
+         <%= render partial: "shared/pagetitle", locals: { pagetitle: '求人情報一覧' } %>
+         <%= render partial: "jobs/job_item", locals: {jobs: @jobs} %>
+        <div class="text-center mt30">
+            <%= link_to t(".btn_all_job"), jobs_path, class: "button" %>
+        </div>
+    </div>
+</section>
+
 <section data-aos="fade-up">
     <div class="container">
         <%= render "shared/banner" %>

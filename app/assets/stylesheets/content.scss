@@ -275,6 +275,7 @@
 .lbl-about-us {
   width: 150px;
 }
+
 //Post Comments
 
 .gf-comment-inner {
@@ -315,3 +316,80 @@
     justify-content: flex-start;
   }
 }
+
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.specific_skills {
+  .table {
+    thead {
+      th:first-child {
+        min-width: 100px;
+      }
+    }
+
+    tbody {
+      .accent-color {
+        background: #f8f8f8;
+      }
+    }
+  }
+
+  .info {
+    strong {
+      font-size: 18px;
+    }
+  }
+}
+.image-job-bg {
+  background-size: cover;
+  height: 300px;
+  background-image: image-url("engineer.jpg");
+}
+
+
+// Job Lists Home
+
+.gf-jobs {
+  background-color: #f7f7f7;
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+.job-lists {
+  .job-header,
+  .job-item {
+    display: flex;
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 20px 10px;
+  }
+
+  .job-item {
+    .meta-date,
+    .job-location {
+      color: rgb(255, 51, 102);
+    }
+  }
+}
+
+.gf-job-meta {
+  padding-bottom: 50px;
+  
+  div {
+    padding: 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+    color: $theme-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+
+    + div {
+      margin-left: 10px;
+    }
+  }
+}
+
