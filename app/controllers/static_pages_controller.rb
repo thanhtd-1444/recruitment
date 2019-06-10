@@ -27,4 +27,6 @@ class StaticPagesController < ApplicationController
       type: "application/pdf"
     )
   end
+  
+  def interns; end
 end
