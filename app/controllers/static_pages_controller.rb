@@ -15,4 +15,6 @@ class StaticPagesController < ApplicationController
   def recruitment_benefit; end
 
   def specific_skills; end
+
+  def engineer_interpreter; end
 end
