@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   get "/contact", to: "static_pages#contact"
   get "/bussiness_content", to: "static_pages#bussiness_content"
   get "/recruitment_benefit", to: "static_pages#recruitment_benefit"
-  get "/skills", to: "static_pages#specific_skills"
+  get "/specific_skills", to: "static_pages#specific_skills"
   get "/engineer_interpreter", to: "static_pages#engineer_interpreter"
+  get "/download_pdf", to: "static_pages#download_pdf"
 
   resources :jobs, only: [:show, :index]
-  resources :specific_skills, only: :index
   resources :posts, only: [:show, :index] do
     resources :comments
   end

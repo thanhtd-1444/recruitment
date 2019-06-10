@@ -17,4 +17,12 @@ class StaticPagesController < ApplicationController
   def specific_skills; end
 
   def engineer_interpreter; end
+
+  def download_pdf
+    send_file(
+      "#{Rails.root}/public/特定技能について.pdf",
+      filename: "特定技能について.pdf",
+      type: "application/pdf"
+    )
+  end
 end
