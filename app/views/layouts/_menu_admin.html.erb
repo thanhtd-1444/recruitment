@@ -10,36 +10,37 @@
         <ul class="metismenu" id="menu">
           <li>
             <%= link_to "#" do %>
-              <i class="fa fa-calendar-check-o"></i>
-              Users
+              <i class="fa fa-users"></i>
+              <%= t ".users" %>
+
             <% end %>
           </li>
 
           <li>
-            <%= link_to "#" do %>
-              <i class="fa fa-users"></i>
-              Contact Us
+            <%= link_to admins_candidates_path do %>
+              <i class="fa fa-phone"></i>
+              <%= t ".candidates" %>
             <% end %>
           </li>
 
           <li>
             <%= link_to admins_posts_path do %>
-              <i class="fa fa-users"></i>
-              Posts
+              <i class="fa fa-television"> </i>
+              <%= t ".posts" %>
             <% end %>
           </li>
 
           <li>
             <%= link_to "#" do %>
-              <i class="fa fa-users"></i>
-              Recuirtments
+              <i class="fa fa-calendar-check-o"></i>
+              <%= t ".recruitments" %>
             <% end %>
           </li>
 
           <li>
             <%= link_to "#" do %>
-              <i class="fa fa-users"></i>
-              Users
+              <i class="fa fa-image"></i>
+              <%= t ".slider_images" %>
             <% end %>
           </li>
         </ul>
