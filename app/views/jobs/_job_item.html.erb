@@ -1,51 +1,40 @@
 <div class="job-lists">
-    <div class="job-header">
-        <div class="job-detail col-md-3">
-           <strong class="lbl-job-list">
-                <%= t ".job_detail"%>
-           </strong>
-        </div>
-        <div class="job-amount col-md-3">
-         <strong class="lbl-job-list">
-            <%= t ".amount"%>
-         </strong>
-        </div>
-        <div class="job-location col-md-2">
-         <strong class="lbl-job-list">
-            <%= t ".location"%>
-         </strong>
-        </div>
-        <div class="job-salary col-md-2">
-            <strong class="lbl-job-list">
-                <%= t ".salary"%>
-            </strong>
-        </div>
-        <div class="meta-date col-md-2">
-            <strong class="lbl-job-list">
-                <%= t ".duration"%>
-            </strong>
-        </div>
-    </div>
     <% jobs.each do |job| %>
         <div class="job-item">
-            <div class="job-detail col-md-3">
+            <div class="job-detail">
+                <h4>
                 <%= link_to job do %>
                     <%= job.title %>
                 <% end %>
+                </h4>
+                <p class="mb0">
+                    <span class="mr10">
+                        <i class="fa fa-map-marker mr5"></i>
+                        <%= job.place %>
+                    </span>
+                    <span>
+                        <i class="fa fa-group mr5"></i>
+                        <%= job.quantity %>
+                    </span>
+                </p>
             </div>
-            <div class="job-amount col-md-3">
-            <%= job.quantity %>
+            <div class="job-feature">
+                <p class="mb0">
+                    <strong class="mr5">給料:</strong>
+                     <%= job.salary %>
+                </p>
+
+                <p class="mb0">
+                    <strong class="mr5">募集期間:</strong>
+                    <%= job.start_date.strftime("%Y/%m/%d") %>
+                    -
+                    <%= job.end_date.strftime("%Y/%m/%d") %>
+                </p>
+                
             </div>
-            <div class="job-location col-md-2">
-            <%= job.place %>
-            </div>
-            <div class="job-salary col-md-2">
-            <%= job.salary %>
-            </div>
-            <div class="meta-date col-md-2">
-                <%= job.start_date.strftime("%Y/%m/%d") %>
-                -
-                <%= job.end_date.strftime("%Y/%m/%d") %>
+
+            <div class="actions">
+                <%= link_to 'Read more', job, class: 'button button-small button-primary button-border' %>
             </div>
         </div>
     <% end %>

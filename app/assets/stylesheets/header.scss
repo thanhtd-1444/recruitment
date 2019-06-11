@@ -127,11 +127,15 @@ header {
             display: flex;
             justify-content: flex-end;
             margin-right: 10px;
+            
+            &.accent-color {
+                font-size: 22px;
+            }
 
             i {
                 position: relative;
-                top: 3px;
-                margin-right: 5px;
+                top: 7px;
+                margin-right: 10px;
             }
         }
     }

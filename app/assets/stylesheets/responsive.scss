@@ -1,7 +1,5 @@
 @media screen and (max-width: 1199px) {
-  .entry-thumbnail {
-    height: 280px !important;
-  }
+
 }
 
 @media screen and (max-width: 991px) {
@@ -123,5 +121,18 @@
   .gf-toggle-icon {
     display: inline-block;
     visibility: visible;
+  }
+
+  .job-lists {
+    .job-item {
+      .job-detail {
+        flex-basis: 100%;
+      }
+
+      .job-feature,
+      .actions {
+        margin-top: 10px;
+      }
+    }
   }
 }

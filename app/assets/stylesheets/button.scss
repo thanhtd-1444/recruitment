@@ -599,6 +599,17 @@ body:not(.device-touch) .button.button-full strong {
 	border-color: #1265A8;
 }
 
+.button-primary { background-color: #7fa15a; }
+.button-3d.button-primary:hover,
+.button-reveal.button-primary:hover,
+.button-border.button-primary:hover,
+.button-border.button-primary.button-fill:before { background-color: #7fa15a !important; }
+
+.button-border.button-primary {
+	color: #7fa15a;
+	border-color: #7fa15a;
+}
+
 .button-amber { background-color: #EB9C4D; }
 .button-3d.button-amber:hover,
 .button-reveal.button-amber:hover,

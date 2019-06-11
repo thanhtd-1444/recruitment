@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "/help", to: "static_pages#help"
   get "/about", to: "static_pages#about"
   get "/contact", to: "static_pages#contact"
+  get "/interns", to: "static_pages#interns"
   get "/bussiness_content", to: "static_pages#bussiness_content"
   get "/recruitment_benefit", to: "static_pages#recruitment_benefit"
   get "/specific_skills", to: "static_pages#specific_skills"
