@@ -50392,3 +50392,373 @@ Processing by StaticPagesController#contact as HTML
 Completed 200 OK in 109ms (Views: 104.6ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (98.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS `recruitment_development`[0m
+  ↳ bin/rails:4
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (3.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS `recruitment_test`[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE DATABASE `recruitment_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE DATABASE `recruitment_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (29.2ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (26.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('3109152644088164520', 0)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+Migrating to DeviseCreateAdmins (20190529060436)
+  [1m[35m (27.8ms)[0m  [1m[35mCREATE TABLE `admins` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `avatar` varchar(255), `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20190529060436_devise_create_admins.rb:5
+  [1m[35m (17.8ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_admins_on_email`  ON `admins` (`email`) [0m
+  ↳ db/migrate/20190529060436_devise_create_admins.rb:41
+  [1m[35m (18.2ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_admins_on_reset_password_token`  ON `admins` (`reset_password_token`) [0m
+  ↳ db/migrate/20190529060436_devise_create_admins.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190529060436')[0m
+  ↳ bin/rails:4
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateCategories (20190530101158)
+  [1m[35m (23.6ms)[0m  [1m[35mCREATE TABLE `categories` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20190530101158_create_categories.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190530101158')[0m
+  ↳ bin/rails:4
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreatePosts (20190530101411)
+  [1m[35m (27.1ms)[0m  [1m[35mCREATE TABLE `posts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `image` varchar(255), `content` text, `publish_status` int DEFAULT 0, `category_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_posts_on_category_id`  (`category_id`), CONSTRAINT `fk_rails_9b1b26f040`
+FOREIGN KEY (`category_id`)
+  REFERENCES `categories` (`id`)
+)[0m
+  ↳ db/migrate/20190530101411_create_posts.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190530101411')[0m
+  ↳ bin/rails:4
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateCandidates (20190605144154)
+  [1m[35m (24.0ms)[0m  [1m[35mCREATE TABLE `candidates` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `phone_number` varchar(255), `content` text, `website` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20190605144154_create_candidates.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190605144154')[0m
+  ↳ bin/rails:4
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateImages (20190605144205)
+  [1m[35m (24.6ms)[0m  [1m[35mCREATE TABLE `images` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `url` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20190605144205_create_images.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190605144205')[0m
+  ↳ bin/rails:4
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateComments (20190605144442)
+  [1m[35m (27.1ms)[0m  [1m[35mCREATE TABLE `comments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_name` varchar(255), `content` text, `rate` float(24), `post_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_comments_on_post_id`  (`post_id`), CONSTRAINT `fk_rails_2fd19c0db7`
+FOREIGN KEY (`post_id`)
+  REFERENCES `posts` (`id`)
+)[0m
+  ↳ db/migrate/20190605144442_create_comments.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190605144442')[0m
+  ↳ bin/rails:4
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddEmailToComments (20190608071247)
+  [1m[35m (45.6ms)[0m  [1m[35mALTER TABLE `comments` ADD `email` varchar(255)[0m
+  ↳ db/migrate/20190608071247_add_email_to_comments.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190608071247')[0m
+  ↳ bin/rails:4
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateJobs (20190609083905)
+  [1m[35m (25.7ms)[0m  [1m[35mCREATE TABLE `jobs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `content` text, `quantity` varchar(255), `place` varchar(255), `salary` varchar(255), `start_date` datetime, `end_date` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20190609083905_create_jobs.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190609083905')[0m
+  ↳ bin/rails:4
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2019-06-11 10:10:16', '2019-06-11 10:10:16')[0m
+  ↳ bin/rails:4
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('3109152644088164520')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT `admins`.* FROM `admins`[0m
+  ↳ db/seeds.rb:8
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ db/seeds.rb:10
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT `jobs`.* FROM `jobs`[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO `categories` (`name`, `created_at`, `updated_at`) VALUES ('Post', '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mAdmin Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `admins` WHERE `admins`.`email` = BINARY 'tran.thanh.tam@sun-asterisk.com' LIMIT 1[0m
+  ↳ db/seeds.rb:15
+  [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO `admins` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('tran.thanh.tam@sun-asterisk.com', '$2a$11$0bvdXj9r9yUH2uysPZYES.1AFpkuc9jOoLawIVq0AkcDqt2zD7jWW', '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `posts` WHERE `posts`.`title` = BINARY 'Post 0' LIMIT 1[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `content`, `publish_status`, `category_id`, `created_at`, `updated_at`) VALUES ('Post 0', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elit', 1, 1, '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mJob Create (0.4ms)[0m  [1m[32mINSERT INTO `jobs` (`title`, `content`, `quantity`, `place`, `salary`, `start_date`, `end_date`, `created_at`, `updated_at`) VALUES ('Job infor 0', 'content test', '20 employees (10 males, 10 female)', 'Tokyo, Japan', '1.000.000 Yen/Month', '2019-05-01 00:00:00', '2019-11-30 23:59:59', '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `posts` WHERE `posts`.`title` = BINARY 'Post 1' LIMIT 1[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `content`, `publish_status`, `category_id`, `created_at`, `updated_at`) VALUES ('Post 1', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elit', 1, 1, '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mJob Create (0.4ms)[0m  [1m[32mINSERT INTO `jobs` (`title`, `content`, `quantity`, `place`, `salary`, `start_date`, `end_date`, `created_at`, `updated_at`) VALUES ('Job infor 1', 'content test', '20 employees (10 males, 10 female)', 'Tokyo, Japan', '1.000.000 Yen/Month', '2019-05-01 00:00:00', '2019-11-30 23:59:59', '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `posts` WHERE `posts`.`title` = BINARY 'Post 2' LIMIT 1[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `content`, `publish_status`, `category_id`, `created_at`, `updated_at`) VALUES ('Post 2', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elit', 1, 1, '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO `jobs` (`title`, `content`, `quantity`, `place`, `salary`, `start_date`, `end_date`, `created_at`, `updated_at`) VALUES ('Job infor 2', 'content test', '20 employees (10 males, 10 female)', 'Tokyo, Japan', '1.000.000 Yen/Month', '2019-05-01 00:00:00', '2019-11-30 23:59:59', '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `posts` WHERE `posts`.`title` = BINARY 'Post 3' LIMIT 1[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `content`, `publish_status`, `category_id`, `created_at`, `updated_at`) VALUES ('Post 3', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elit', 1, 1, '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO `jobs` (`title`, `content`, `quantity`, `place`, `salary`, `start_date`, `end_date`, `created_at`, `updated_at`) VALUES ('Job infor 3', 'content test', '20 employees (10 males, 10 female)', 'Tokyo, Japan', '1.000.000 Yen/Month', '2019-05-01 00:00:00', '2019-11-30 23:59:59', '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `posts` WHERE `posts`.`title` = BINARY 'Post 4' LIMIT 1[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `content`, `publish_status`, `category_id`, `created_at`, `updated_at`) VALUES ('Post 4', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elit', 1, 1, '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO `jobs` (`title`, `content`, `quantity`, `place`, `salary`, `start_date`, `end_date`, `created_at`, `updated_at`) VALUES ('Job infor 4', 'content test', '20 employees (10 males, 10 female)', 'Tokyo, Japan', '1.000.000 Yen/Month', '2019-05-01 00:00:00', '2019-11-30 23:59:59', '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `posts` WHERE `posts`.`title` = BINARY 'Post 5' LIMIT 1[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `content`, `publish_status`, `category_id`, `created_at`, `updated_at`) VALUES ('Post 5', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elit', 1, 1, '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mJob Create (0.6ms)[0m  [1m[32mINSERT INTO `jobs` (`title`, `content`, `quantity`, `place`, `salary`, `start_date`, `end_date`, `created_at`, `updated_at`) VALUES ('Job infor 5', 'content test', '20 employees (10 males, 10 female)', 'Tokyo, Japan', '1.000.000 Yen/Month', '2019-05-01 00:00:00', '2019-11-30 23:59:59', '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `posts` WHERE `posts`.`title` = BINARY 'Post 6' LIMIT 1[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `content`, `publish_status`, `category_id`, `created_at`, `updated_at`) VALUES ('Post 6', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elit', 1, 1, '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO `jobs` (`title`, `content`, `quantity`, `place`, `salary`, `start_date`, `end_date`, `created_at`, `updated_at`) VALUES ('Job infor 6', 'content test', '20 employees (10 males, 10 female)', 'Tokyo, Japan', '1.000.000 Yen/Month', '2019-05-01 00:00:00', '2019-11-30 23:59:59', '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `posts` WHERE `posts`.`title` = BINARY 'Post 7' LIMIT 1[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `content`, `publish_status`, `category_id`, `created_at`, `updated_at`) VALUES ('Post 7', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elit', 1, 1, '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO `jobs` (`title`, `content`, `quantity`, `place`, `salary`, `start_date`, `end_date`, `created_at`, `updated_at`) VALUES ('Job infor 7', 'content test', '20 employees (10 males, 10 female)', 'Tokyo, Japan', '1.000.000 Yen/Month', '2019-05-01 00:00:00', '2019-11-30 23:59:59', '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `posts` WHERE `posts`.`title` = BINARY 'Post 8' LIMIT 1[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `content`, `publish_status`, `category_id`, `created_at`, `updated_at`) VALUES ('Post 8', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elit', 1, 1, '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO `jobs` (`title`, `content`, `quantity`, `place`, `salary`, `start_date`, `end_date`, `created_at`, `updated_at`) VALUES ('Job infor 8', 'content test', '20 employees (10 males, 10 female)', 'Tokyo, Japan', '1.000.000 Yen/Month', '2019-05-01 00:00:00', '2019-11-30 23:59:59', '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `posts` WHERE `posts`.`title` = BINARY 'Post 9' LIMIT 1[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `content`, `publish_status`, `category_id`, `created_at`, `updated_at`) VALUES ('Post 9', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elit', 1, 1, '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO `jobs` (`title`, `content`, `quantity`, `place`, `salary`, `start_date`, `end_date`, `created_at`, `updated_at`) VALUES ('Job infor 9', 'content test', '20 employees (10 males, 10 female)', 'Tokyo, Japan', '1.000.000 Yen/Month', '2019-05-01 00:00:00', '2019-11-30 23:59:59', '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `posts` WHERE `posts`.`title` = BINARY 'Post 10' LIMIT 1[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `content`, `publish_status`, `category_id`, `created_at`, `updated_at`) VALUES ('Post 10', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elit', 1, 1, '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO `jobs` (`title`, `content`, `quantity`, `place`, `salary`, `start_date`, `end_date`, `created_at`, `updated_at`) VALUES ('Job infor 10', 'content test', '20 employees (10 males, 10 female)', 'Tokyo, Japan', '1.000.000 Yen/Month', '2019-05-01 00:00:00', '2019-11-30 23:59:59', '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `posts` WHERE `posts`.`title` = BINARY 'Post 11' LIMIT 1[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `content`, `publish_status`, `category_id`, `created_at`, `updated_at`) VALUES ('Post 11', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elit', 1, 1, '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO `jobs` (`title`, `content`, `quantity`, `place`, `salary`, `start_date`, `end_date`, `created_at`, `updated_at`) VALUES ('Job infor 11', 'content test', '20 employees (10 males, 10 female)', 'Tokyo, Japan', '1.000.000 Yen/Month', '2019-05-01 00:00:00', '2019-11-30 23:59:59', '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `posts` WHERE `posts`.`title` = BINARY 'Post 12' LIMIT 1[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `content`, `publish_status`, `category_id`, `created_at`, `updated_at`) VALUES ('Post 12', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elit', 1, 1, '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mJob Create (0.6ms)[0m  [1m[32mINSERT INTO `jobs` (`title`, `content`, `quantity`, `place`, `salary`, `start_date`, `end_date`, `created_at`, `updated_at`) VALUES ('Job infor 12', 'content test', '20 employees (10 males, 10 female)', 'Tokyo, Japan', '1.000.000 Yen/Month', '2019-05-01 00:00:00', '2019-11-30 23:59:59', '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `posts` WHERE `posts`.`title` = BINARY 'Post 13' LIMIT 1[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `content`, `publish_status`, `category_id`, `created_at`, `updated_at`) VALUES ('Post 13', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elit', 1, 1, '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO `jobs` (`title`, `content`, `quantity`, `place`, `salary`, `start_date`, `end_date`, `created_at`, `updated_at`) VALUES ('Job infor 13', 'content test', '20 employees (10 males, 10 female)', 'Tokyo, Japan', '1.000.000 Yen/Month', '2019-05-01 00:00:00', '2019-11-30 23:59:59', '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `posts` WHERE `posts`.`title` = BINARY 'Post 14' LIMIT 1[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `content`, `publish_status`, `category_id`, `created_at`, `updated_at`) VALUES ('Post 14', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elit', 1, 1, '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mJob Create (0.6ms)[0m  [1m[32mINSERT INTO `jobs` (`title`, `content`, `quantity`, `place`, `salary`, `start_date`, `end_date`, `created_at`, `updated_at`) VALUES ('Job infor 14', 'content test', '20 employees (10 males, 10 female)', 'Tokyo, Japan', '1.000.000 Yen/Month', '2019-05-01 00:00:00', '2019-11-30 23:59:59', '2019-06-11 10:10:24', '2019-06-11 10:10:24')[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19

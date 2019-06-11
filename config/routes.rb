@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "/recruitment_benefit", to: "static_pages#recruitment_benefit"
   get "/specific_skills", to: "static_pages#specific_skills"
   get "/engineer_interpreter", to: "static_pages#engineer_interpreter"
+  get "/study_abroad", to: "static_pages#study_abroad"
   get "/download_pdf", to: "static_pages#download_pdf"
 
   resources :jobs, only: [:show, :index]
