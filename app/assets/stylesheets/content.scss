@@ -304,7 +304,7 @@
 
   .comment-item {
       padding-bottom: 10px;
-  
+
      + .comment-item {
       border-top: 1px solid #f8f8f8;
       padding-top: 10px;
@@ -337,10 +337,8 @@
     }
   }
 
-  .info {
-    strong {
-      font-size: 18px;
-    }
+  .lbl-job-list {
+    font-size: 18px;
   }
 }
 .image-job-bg {
@@ -376,7 +374,7 @@
 
 .gf-job-meta {
   padding-bottom: 50px;
-  
+
   div {
     padding: 20px;
     background-color: #f7f7f7;
@@ -392,4 +390,3 @@
     }
   }
 }
-
