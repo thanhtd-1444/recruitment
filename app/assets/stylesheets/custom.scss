@@ -5,3 +5,11 @@
 .mobile-phone {
   font-size: 27px;
 }
+
+.contact-us {
+  background-color: $theme-color;
+  .text-content {
+    color: #fff;
+    margin-top: 30px;
+  }
+}
