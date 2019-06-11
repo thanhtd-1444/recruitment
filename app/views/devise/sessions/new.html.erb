@@ -9,11 +9,11 @@
         <div class="login-form-body">
           <div class="form-gp">
             <%= f.email_field :email, autofocus: true, placeholder: "Enter your email", autocomplete: "email" %>
-            <i class="ti-email"></i>
+            <i class="fa fa-envelope-o"></i>
           </div>
           <div class="form-gp">
             <%= f.password_field :password, placeholder: "Enter your password", autocomplete: "current-password" %>
-            <i class="ti-lock"></i>
+            <i class="fa fa-lock"></i>
           </div>
           <div class="row mb-4 rmber-area">
             <% if devise_mapping.rememberable? %>

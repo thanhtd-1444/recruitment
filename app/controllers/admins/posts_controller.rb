@@ -15,6 +15,7 @@ class Admins::PostsController < Admins::BaseController
     @post.category = category
 
     if @post.save
+      flash[:success] = t ".success"
       redirect_to admins_posts_path
     else
       flash[:danger] = t ".failure"

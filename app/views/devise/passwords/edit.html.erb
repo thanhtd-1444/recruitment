@@ -11,11 +11,11 @@
                   <%= render "devise/shared/error_messages", resource: resource %>
                     <div class="form-gp">
                       <%= f.password_field :password, autofocus: true, placeholder: "New password", autocomplete: "new-password" %>
-                        <i class="ti-lock"></i>
+                        <i class="fa fa-lock"></i>
                     </div>
                     <div class="form-gp">
                       <%= f.password_field :password_confirmation, placeholder: "Confirmation new password", autocomplete: "off" %>
-                        <i class="ti-lock"></i>
+                        <i class="fa fa-lock"></i>
                     </div>
                     <div class="submit-btn-area mt-5">
                       <%= f.button "Reset password" %>

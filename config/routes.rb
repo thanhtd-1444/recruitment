@@ -30,5 +30,10 @@ Rails.application.routes.draw do
         get :publish
       end
     end
+    resources :candidates do
+      member do
+        get :contact
+      end
+    end
   end
 end

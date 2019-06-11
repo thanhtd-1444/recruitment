@@ -2,13 +2,16 @@ class StaticPagesController < ApplicationController
   def home
     @posts = Post.newest.limit 6
     @jobs = Job.limit 5
+    @candidate = Candidate.new
   end
 
   def help; end
 
   def about; end
 
-  def contact; end
+  def contact
+    @candidate = Candidate.new
+  end
 
   def bussiness_content; end
 
