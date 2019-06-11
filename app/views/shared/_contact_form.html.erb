@@ -1,54 +1,51 @@
 <div data-aos="fade-up" class="contract-wrapper">
-    <form class="form-horizontal" id="form-contact">
-        <div class="gf-heading">
-            <h2 class="heading-title">連絡先を送る</h2>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
-                    <div class="form-group">
-                        <label class="control-label required" for="input-name">名前と姓</label>
-                        <input type="text" name="name-customer" value="" id="input-name" class="form-control">
-                    </div>
-                </div>
-
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
-                    <div class="form-group">
-                        <label class="control-label required" for="input-email">メール</label>
-                        <input type="text" name="email" value="" id="input-email" class="form-control">
-                    </div>
-                </div>
-
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
-                    <div class="form-group">
-                        <label class="control-label required" for="input-phone">電話番号</label>
-                        <input type="text" name="phone" value="" id="input-phone" class="form-control">
-                    </div>
-                </div>
-
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
-                    <div class="form-group">
-                        <label class="control-label" for="input-email">Website</label>
-                        <input type="text" name="website" value="" id="input-email" class="form-control">
-                    </div>
-                </div>
-
-                <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
-                    <div class="form-group">
-                        <label class="control-label required" for="input-review">コンテンツ</label>
-                        <textarea name="text_content" rows="5" id="input-review" class="form-control"></textarea>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="buttons">
-            <div class="text-center">
-                <button class="button button-large" type="button" id="button-put" data-loading-text="読み込み中"
-                    class="btn btn-primary">提出する</button>
-            </div>
+  <%= form_for [:admins, @candidate], {class: "form-horizontal", id: "form-contact"} do |f| %>
+    <div class="gf-heading">
+      <h2 class="heading-title"><%= t ".title"%></h2>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
+          <div class="form-group">
+            <%= f.label :name, t(".name"), class: "control-label required" %>
+            <%= f.text_field :name, class: 'form-control', id: "input-name" %>
+          </div>
         </div>
 
-    </form>
-    <div id="messeger"></div>
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
+          <div class="form-group">
+            <%= f.label :email, t(".email"), class: "control-label required" %>
+            <%= f.email_field :email, class: 'form-control', id: "input-email" %>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
+          <div class="form-group">
+            <%= f.label :phone_number, t(".phone_number"), class: "control-label required" %>
+            <%= f.text_field :phone_number, class: 'form-control', id: "input-phone" %>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
+          <div class="form-group">
+            <%= f.label :website, t(".website"), class: "control-label" %>
+            <%= f.text_field :website, class: 'form-control', id: "input-phone" %>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+          <div class="form-group">
+            <%= f.label :content, t(".content"), class: "control-label required" %>
+            <%= f.text_area :content, rows: 5, class: 'form-control', id: "input-review" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <div class="text-center">
+        <%= f.submit t(".contact"), class: "button button-large btn btn-primary", id: "button-put" %>
+      </div>
+    </div>
+  <% end %>
+  <div id="messeger"></div>
 </div>

@@ -1,6 +1,13 @@
 ja:
   record:
     not_found: " %{object_name} not found"
+  layouts:
+    menu_admin:
+      users: Users
+      candidates: Candidates
+      posts: Posts
+      recruitments: Recruitments
+      slider_images: Slider Images
   admins:
     posts:
       edit:
@@ -30,6 +37,27 @@ ja:
       publish:
         success: "%{action} '%{post}' successfully"
         failure: "%{action} '%{post}' failure"
+    candidates:
+      index:
+        title: Candidates
+        id: ID
+        name: Name
+        email: Email
+        phone_number: Phone Number
+        website: Website
+        content: Content
+        action: Action
+        status: Status
+        contacted: Contacted
+        not_contact: Not Contact
+      contact:
+        contacted_success: Xác nhận Đã liên lạc với ứng viên '%{candidate}' thành công.
+        contacted_failure: Xác nhận Đã liên lạc với ứng viên '%{candidate}' không thành công.
+        not_contact_success: Xác nhận Chưa liên lạc với ứng viên '%{candidate}' thành công.
+        not_contact_failure: Xác nhận Chưa liên lạc với ứng viên '%{candidate}' không thành công.
+      create:
+        success: Cam on ban da lien he, chung toi se lien lac voi ban som nhat co the
+        failure: Thong tin lien he cua ban khong hop le
   static_pages:
     bussiness_content:
       title: 事業内容
@@ -61,3 +89,12 @@ ja:
       location: 勤務地
       salary: 給料
       duration: 募集期間
+  shared:
+    contact_form:
+      title: 連絡先を送る
+      name: 名前と姓
+      email: メール
+      phone_number: 電話番号
+      website: Website
+      content: コンテンツ
+      contact: 提出する
