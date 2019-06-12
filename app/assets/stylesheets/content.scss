@@ -1,9 +1,27 @@
 .gf-page-heading {
-  padding: 50px 0;
+  padding: 60px 0;
+  background-image: image-url("sakura.jpg");
+  background-size: cover;
+  position: relative;
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+  }
 
   .page-title {
+    color: $white;
     margin-bottom: 0;
     font-size: 30px;
+    position: absolute;
+    z-index: 3;
+    transform: translateY(-50%);
+    left: 100px;
   }
 }
 
@@ -377,7 +395,7 @@
   margin: 5px 0 15px 15px;
   float: right;
   height: auto;
-  width: 500px;
+  width: 400px;
 }
 
 .banner-info {
@@ -391,5 +409,69 @@
       color: $white;
       font-size: 18px;
     }
+  }
+}
+
+
+.sticky-menu {
+  background-color: $theme-color;
+  padding: 20px 15px;
+  margin-top: 40px;
+  transition: all .3s;
+  z-index: 999 !important;
+
+  li + li {
+    margin-top: 20px;
+  }
+
+  li > a {
+    color: $white;
+    font-size: 16px;
+    transition: all .3s;
+
+    i {
+      margin-right: 10px;
+      position: relative;
+      transition: all .3s;
+      left: 0;
+    }
+
+    &:hover {
+      i {
+        left: 5px;;
+      }
+    }
+  }
+
+}
+
+.is-sticky .sticky-menu {
+  margin-top: 0;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 3px solid $theme-color;
+  margin: 1.5em 10px;
+  padding: 1.5em 10px;
+}
+
+blockquote p {
+  display: inline;
+}
+
+.content-left,
+.content-right {
+  background: #f9f9f9;
+  padding: 20px;
+  border: 1px solid $theme-color;
+
+  p {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+
+  span {
+    font-size: 18px;
   }
 }
