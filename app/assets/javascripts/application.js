@@ -74,7 +74,33 @@ $(document).on('turbolinks:load', function() {
         var parent = $('.navbar-collapse');
         parent.toggleClass('collapsed');
     });
+
+    if ($(window).width() < 992) {
+        $(".sticky-menu").unstick();
+    } else {
+        $(".sticky-menu").sticky({topSpacing:100});
+    }
+
+    $( window ).resize(function() {
+        if ($(window).width() < 992) {
+            $(".sticky-menu").unstick();
+        } else {
+            $(".sticky-menu").sticky({topSpacing:100});
+        }
+    });
+
 });
+
+function scrollToID (elementID) {
+    console.log(1)
+    $('html, body').animate({
+        scrollTop: $("#"+ elementID +"").offset().top - 50
+    }, 500);
+}
+
+$(document).load(function(){
+    scrollToID();
+  });
 
 $(document).mouseup(function(e) {
     var container = $('.gf-toggle-icon');

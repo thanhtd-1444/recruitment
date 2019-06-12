@@ -10,7 +10,7 @@ $property-map: (
   pb: padding-bottom,
   pl: padding-left
 );
-$sizes-list: 0 5 10 15 20 25 30;
+$sizes-list: 0 5 10 15 20 25 30 40 50;
 
 @each $size in $sizes-list {
   $val: $size + px;

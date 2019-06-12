@@ -5,7 +5,7 @@
     <% end %>
     <div class="media-body justify-content">
       <h5 class="mb-3"><%= post.title %></h5>
-      <%= raw(post.content) %>
+      <%= truncate(post.content, length: 1000) %>
     </div>
 
     <div class="col-lg-1 col-md-2 mr-2">
