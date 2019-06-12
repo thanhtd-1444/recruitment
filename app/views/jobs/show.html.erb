@@ -1,7 +1,12 @@
 <div class="container gf-job-detail">
-  <%= render partial: "shared/page_header", locals: { title: @job.title } %>
-  <div class="row">
-    <div class="col-md-8 gf-post-detail">
+  <h3 class="mt50 mb10"><%= @job.title %></h3>
+	<div class="row">
+    <div class="col-md-8 gf-job-detail">
+      <ul class="gf-post-meta list-inline">
+				<li class="meta-date">
+					<%= @job.start_date.strftime("%Y-%m-%d") %> ~ <%= @job.end_date.strftime("%Y-%m-%d") %>
+				</li>
+			</ul>
       <div class="clearfix gf-entry-content">
         <%= raw @job.content %>
       </div>

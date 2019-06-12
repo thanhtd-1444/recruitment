@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-12 mt-5">
+    <div class="card">
+      <div class="card-body">
+        <%= link_to new_admins_job_path, class: "btn btn-outline-primary" do %>
+          <span class="fa fa-plus-circle"></span>
+          <%= t ".create" %>
+        <% end %>
+        <br><br>
+        <div class="single-table">
+          <div class="table-responsive">
+            <table class="table table-hover progress-table text-center">
+              <thead class="text-uppercase">
+                <tr>
+                  <th scope="col"><%= t ".id" %></th>
+                  <th scope="col"><%= t ".title" %></th>
+                  <th scope="col"><%= t ".quantity" %></th>
+                  <th scope="col"><%= t ".place" %></th>
+                  <th scope="col"><%= t ".salary" %></th>
+                  <th scope="col" class="max-lenght-content"><%= t ".content" %></th>
+                  <th scope="col"><%= t ".expired_time" %></th>
+                  <th scope="col"><%= t ".action" %></th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @jobs.each do |job| %>
+                  <tr>
+                    <th scope="row"><%= job.id %></th>
+                    <td><%= job.title %></td>
+                    <td><%= job.quantity %></td>
+                    <td><%= job.place %></td>
+                    <td><%= job.salary %></td>
+                    <td class="max-lenght-content"><%= truncate(raw(job.content), length: 150) %></td>
+                    <td><%= job.start_date.strftime("%m-%d-%Y") %> ~ <%= job.end_date.strftime("%m-%d-%Y") %></td>
+                    <td>
+                      <div class="btn-align-center row">
+                        <%= link_to job_path(job), class: "btn btn-outline-info btn-xs mb-3 mr-1" do %>
+                          <span class="fa fa-eye"></span>
+                        <% end %>
+                        <%= link_to edit_admins_job_path(job), class: "btn btn-outline-primary btn-xs mb-3 mr-1" do %>
+                          <span class="fa fa-edit"></span>
+                        <% end %>
+                        <%= link_to admins_job_path(job), method: :delete, class: "btn btn-outline-danger btn-xs mb-3 mr-1" do %>
+                          <span class="fa fa-trash-o"></span>
+                        <% end %>
+                      </div>
+                    </td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <%= paginate @jobs %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

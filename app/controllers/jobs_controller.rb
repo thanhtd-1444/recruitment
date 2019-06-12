@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.all.page(params[:page]).per Settings.posts.user_per_page
+    @jobs = Job.available.newest.page(params[:page]).per Settings.posts.user_per_page
   end
 
   def show
