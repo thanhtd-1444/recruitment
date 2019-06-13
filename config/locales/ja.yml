@@ -24,6 +24,10 @@ ja:
               blank: can't be blank
             content:
               blank: can't be blank
+        image:
+          attributes:
+            url:
+              blank: can't be blank
   record:
     not_found: " %{object_name} not found"
   layouts:
@@ -117,6 +121,32 @@ ja:
       create:
         success: Cam on ban da lien he, chung toi se lien lac voi ban som nhat co the
         failure: Thong tin lien he cua ban khong hop le
+    slider_images:
+      edit:
+        title: Edit Slider Image
+      new:
+        title: Create new Slider Image
+      slider_image_form:
+        slider_image: Slider Image
+        publish: Publish?
+        save: Save
+      slider_image:
+        publish: Publish
+        unpublish: Unpublish
+      index:
+        create: Create
+      create:
+        success: Create Slider Image successfully
+        failure: Create Slider Image failure
+      update:
+        success: Update Slider Image successfully
+        failure: Update Slider Image failure
+      destroy:
+        success: Delete Slider Image successfully
+        failure: Delete Slider Image failure
+      publish:
+        success: "%{action} Slider Image successfully"
+        failure: "%{action} Slider Image failure"
   static_pages:
     bussiness_content:
       title: 事業内容

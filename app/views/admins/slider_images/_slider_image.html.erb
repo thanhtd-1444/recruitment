@@ -1,0 +1,32 @@
+<% slider_images.each do |slider_image| %>
+<div class="col-lg-4 col-md-6 mt-5">
+  <div class="card card-bordered">
+    <div class="slider-image">
+      <%= image_tag slider_image.url.url, class: "card-img-top img-fluid" %>
+    </div>
+    <div class="card-body">
+      <%= link_to edit_admins_slider_image_path(slider_image), class: "btn btn-outline-primary btn-xs mb-3 mr-1" do %>
+        <span class="fa fa-edit"></span>
+        <%= t(".edit") %>
+      <% end %>
+
+      <%= link_to admins_slider_image_path(slider_image), method: :delete, class: "btn btn-outline-danger btn-xs mb-3 mr-1" do %>
+        <span class="fa fa-trash-o"></span>
+        <%= t(".delete") %>
+      <% end %>
+
+      <% if slider_image.publish? %>
+        <%= link_to publish_admins_slider_image_path(id: slider_image.id, publish_status: :unpublish), class: "btn btn-outline-warning btn-xs mb-3" do %>
+          <span class="fa fa-tv"></span>
+          <%= t(".unpublish") %>
+        <% end %>
+      <% else %>
+        <%= link_to publish_admins_slider_image_path(id: slider_image.id, publish_status: :publish), class: "btn btn-outline-success btn-xs mb-3" do %>
+          <span class="fa fa-tv"></span>
+          <%= t(".publish") %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% end %>

@@ -37,5 +37,10 @@ Rails.application.routes.draw do
       end
     end
     resources :jobs
+    resources :slider_images do
+      member do
+        get :publish
+      end
+    end
   end
 end

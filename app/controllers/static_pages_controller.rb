@@ -3,6 +3,7 @@ class StaticPagesController < ApplicationController
     @posts = Post.newest.limit 6
     @jobs = Job.limit 5
     @candidate = Candidate.new
+    @slider_images = Image.publish
   end
 
   def help; end
@@ -30,7 +31,7 @@ class StaticPagesController < ApplicationController
       type: "application/pdf"
     )
   end
-  
+
   def interns; end
 
   def job_details; end
