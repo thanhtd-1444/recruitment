@@ -1,10 +1,10 @@
 $(document).on('turbolinks:load', function () {
     $(".owl-carousel").owlCarousel({
         animateOut: true,
-        itemsDesktop: true,
         animateIn: true,
+        itemsDesktop: true,
         items: 1,
-        smartSpeed: 450,
+        smartSpeed: 500,
         loop: true,
         autoplay: true,
         autoplayTimeout: 5000
