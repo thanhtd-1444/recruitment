@@ -1,0 +1,43 @@
+<%= form_for [:admins, @job] do |f| %>
+  <%= render "admins/shared/error_messages", object: f.object %>
+
+  <div class="form-group">
+    <%= f.label :title, t(".title"), class: "col-form-label  required" %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :quantity, t(".quantity"), class: "col-form-label  required" %>
+    <%= f.text_field :quantity, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :place, t(".place"), class: "col-form-label  required" %>
+    <%= f.text_field :place, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :salary, t(".salary"), class: "col-form-label  required" %>
+    <%= f.text_field :salary, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :content, t(".content"), class: "col-form-label  required" %><br>
+    <%= f.cktext_area :content, ckeditor: { language: 'us'} %>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-md-2">
+    <%= f.label :start_date, t(".start_date"), class: "col-form-label  required" %>
+    <%= f.date_field :start_date, class: 'form-control' %>
+    </div>
+    <div class="col-md-2">
+    <%= f.label :end_date, t(".end_date"), class: "col-form-label  required" %>
+    <%= f.date_field :end_date, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit t(".save"), class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -36,5 +36,6 @@ Rails.application.routes.draw do
         get :contact
       end
     end
+    resources :jobs
   end
 end

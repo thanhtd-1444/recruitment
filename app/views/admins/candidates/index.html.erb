@@ -21,7 +21,7 @@
               <tbody>
                 <% @candidates.each do |candidate| %>
                   <tr>
-                    <th scope="row">1</th>
+                    <th scope="row"><%= candidate.id %></th>
                     <td><%= candidate.name %></td>
                     <td><%= candidate.email %></td>
                     <td><%= candidate.phone_number %></td>

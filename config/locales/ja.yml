@@ -1,4 +1,29 @@
 ja:
+  activerecord:
+    errors:
+      models:
+        job:
+          attributes:
+            title:
+              blank: can't be blank
+            quantity:
+              blank: can't be blank
+            place:
+              blank: can't be blank
+            salary:
+              blank: can't be blank
+            content:
+              blank: can't be blank
+            start_date:
+              blank: can't be blank
+            end_date:
+              blank: can't be blank
+        post:
+          attributes:
+            title:
+              blank: can't be blank
+            content:
+              blank: can't be blank
   record:
     not_found: " %{object_name} not found"
   layouts:
@@ -6,7 +31,7 @@ ja:
       users: Users
       candidates: Candidates
       posts: Posts
-      recruitments: Recruitments
+      jobs: Jobs
       slider_images: Slider Images
   admins:
     posts:
@@ -37,6 +62,40 @@ ja:
       publish:
         success: "%{action} '%{post}' successfully"
         failure: "%{action} '%{post}' failure"
+    jobs:
+      index:
+        create: Create
+        id: ID
+        title: Job Title
+        quantity: 募集人数
+        place: 勤務地
+        salary: 給料
+        content: 仕事の内容
+        expired_time: 募集期間
+        action: Action
+
+      edit:
+        title: Edit job information
+      new:
+        title: Create new job
+      job_form:
+        title: Job title
+        quantity: Quantity
+        place: Place
+        salary: Salary
+        save: Save
+      create:
+        success: Create Job successfully
+        failure: Create Job failure
+      update:
+        success: Update Job successfully
+        failure: Update Job failure
+      destroy:
+        success: Delete Job successfully
+        failure: Delete Job failure
+      publish:
+        success: "%{action} '%{job}' successfully"
+        failure: "%{action} '%{job}' failure"
     candidates:
       index:
         title: Candidates
