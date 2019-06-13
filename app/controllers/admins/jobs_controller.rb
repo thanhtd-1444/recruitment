@@ -28,13 +28,6 @@ class Admins::JobsController < Admins::BaseController
   end
 
   def update
-    if @job.update job_params
-      flash[:success] = t ".success"
-      redirect_to admins_jobs_path
-    else
-      flash[:danger] = t ".failure"
-      render :edit
-    end
   end
 
   def destroy

@@ -130,11 +130,12 @@ ja:
         slider_image: Slider Image
         publish: Publish?
         save: Save
+        title: Create new Slider Image
       slider_image:
         publish: Publish
         unpublish: Unpublish
       index:
-        create: Create
+        create: Update new Image
       create:
         success: Create Slider Image successfully
         failure: Create Slider Image failure

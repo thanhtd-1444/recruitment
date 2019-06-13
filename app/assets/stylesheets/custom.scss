@@ -30,3 +30,23 @@
 .slider-image {
   height: 400px;
 }
+
+#image-preview {
+  display: none;
+
+  &.show {
+    display: initial;
+  }
+}
+
+.action-wrapper {
+  align-items: center;
+  .btn {
+    max-height: 43px;
+    margin-left: 15px;
+  }
+
+  .btn-block + .btn-block {
+    margin-top: 0;
+  }
+}
