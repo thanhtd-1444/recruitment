@@ -1,0 +1,17 @@
+<%= form_for @slider_image, as: :slider_image, url: admins_slider_images_path do |f| %>
+  <%= render "admins/shared/error_messages", object: f.object %>
+
+  <div class="form-group">
+    <%= f.label :image, t(".image"), class: "col-form-label required" %><br>
+    <%= f.file_field :url %><br>
+  </div>
+
+  <div class="form-group custom-control custom-checkbox">
+    <%= f.check_box :publish_status, {class: "custom-control-input", id: "customCheck1", checked: true}, :publish, :unpublish %>
+    <%= f.label :publish, t(".publish"), class: "custom-control-label", for: "customCheck1" %><br>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit t(".save"), class: "btn btn-primary" %>
+  </div>
+<% end %>

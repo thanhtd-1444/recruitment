@@ -1,6 +1,5 @@
 <div class="owl-carousel"">
-  <%= image_tag "slider/slide1.jpeg" %>
-  <%= image_tag "slider/slide2.jpeg" %>
-  <%= image_tag "slider/slide3.jpeg" %>
-  <%= image_tag "slider/slide4.jpeg" %>
+  <% slider_images.each do |image| %>
+    <%= image_tag image.url.url %>
+  <% end %>
 </div>

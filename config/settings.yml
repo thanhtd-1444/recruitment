@@ -4,3 +4,5 @@ posts:
   recent_page: 3
 jobs:
   per_page: 10
+slider_images:
+  per_page: 9
