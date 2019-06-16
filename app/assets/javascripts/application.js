@@ -23,6 +23,42 @@
 //= require js/owl.autoplay.js
 //= require social-share-button
 
+function saveInfomation () {
+    var userName = $('#comment_user_name').val() || $('#job_comment_user_name').val();
+    var userEmail = $('#comment_email').val() || $('#job_comment_email').val();
+    localStorage.setItem('username', userName)
+    localStorage.setItem('email', userEmail)
+}
+
+function removeInfomation() {
+    localStorage.removeItem('username');
+    localStorage.removeItem('email');
+}
+
+function getDataComment() {
+    var userName = localStorage.getItem('username')
+    var userEmail = localStorage.getItem('email')
+    if (userName) {
+        $('#comment_user_name').val(userName);
+        $('#job_comment_user_name').val(userName);
+        $('#rememberMe').attr("checked", "checked");
+    }
+    if (userEmail) {
+        $('#comment_email').val(userEmail);
+        $('#job_comment_email').val(userEmail);
+        $('#rememberMe').attr("checked", "checked");
+    }
+}
+
+function onCLickSaveMe() {
+    $('#rememberMe').change(function() {
+        if($(this).is(":checked")) {
+           saveInfomation();
+           return;
+        }
+        removeInfomation()
+     });
+}
 
 $(document).on('turbolinks:load', function() {
     AOS.init({
@@ -88,6 +124,9 @@ $(document).on('turbolinks:load', function() {
             $(".sticky-menu").sticky({topSpacing:100});
         }
     });
+
+    onCLickSaveMe();
+    getDataComment();
 
 });
 

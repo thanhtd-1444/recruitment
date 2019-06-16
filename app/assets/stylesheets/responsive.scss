@@ -1,5 +1,12 @@
 @media screen and (max-width: 1199px) {
-
+  .recent-posts {
+    .blog-grid {
+      article:last-child {
+        display: none;
+        visibility: hidden;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 991px) {

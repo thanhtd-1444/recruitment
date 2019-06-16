@@ -188,3 +188,8 @@ ja:
       website: Website
       content: コンテンツ
       contact: 提出する
+
+  job_comments:
+    form:
+      submit: Submit
+      remember: Rememberme with next comments

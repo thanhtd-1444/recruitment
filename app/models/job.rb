@@ -3,4 +3,6 @@ class Job < ApplicationRecord
 
   scope :newest, ->{order :end_date}
   scope :available, -> {where("? BETWEEN start_date AND end_date", Date.current)}
+
+  has_many :job_comments, dependent: :destroy
 end

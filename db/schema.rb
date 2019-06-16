@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_13_083715) do
+ActiveRecord::Schema.define(version: 2019_06_16_020221) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -61,6 +61,16 @@ ActiveRecord::Schema.define(version: 2019_06_13_083715) do
     t.integer "publish_status"
   end
 
+  create_table "job_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "user_name"
+    t.string "email"
+    t.text "content"
+    t.bigint "job_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["job_id"], name: "index_job_comments_on_job_id"
+  end
+
   create_table "jobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "content"
@@ -85,5 +95,6 @@ ActiveRecord::Schema.define(version: 2019_06_13_083715) do
   end
 
   add_foreign_key "comments", "posts"
+  add_foreign_key "job_comments", "jobs"
   add_foreign_key "posts", "categories"
 end
