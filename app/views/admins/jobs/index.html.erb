@@ -26,12 +26,12 @@
                 <% @jobs.each do |job| %>
                   <tr>
                     <th scope="row"><%= job.id %></th>
-                    <td><%= job.title %></td>
-                    <td><%= job.quantity %></td>
+                    <td class="no-wrap"><%= job.title %></td>
+                    <td class="no-wrap"><%= job.quantity %></td>
                     <td><%= job.place %></td>
                     <td><%= job.salary %></td>
                     <td class="max-lenght-content"><%= truncate(raw(job.content), length: 150) %></td>
-                    <td><%= job.start_date.strftime("%m-%d-%Y") %> ~ <%= job.end_date.strftime("%m-%d-%Y") %></td>
+                    <td class="no-wrap"><%= job.start_date.strftime("%m-%d-%Y") %> ~ <%= job.end_date.strftime("%m-%d-%Y") %></td>
                     <td>
                       <div class="btn-align-center row">
                         <%= link_to job_path(job), class: "btn btn-outline-info btn-xs mb-3 mr-1" do %>
@@ -51,7 +51,7 @@
             </table>
           </div>
         </div>
-        <div>
+        <div class="mt30">
           <%= paginate @jobs %>
         </div>
       </div>

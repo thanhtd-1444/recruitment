@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   get "/study_abroad", to: "static_pages#study_abroad"
   get "/download_pdf", to: "static_pages#download_pdf"
 
-  resources :jobs, only: [:show, :index]
+  resources :jobs, only: [:show, :index] do
+    resources :job_comments
+  end
   resources :posts, only: [:show, :index] do
     resources :comments
   end
