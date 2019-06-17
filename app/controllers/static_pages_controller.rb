@@ -33,4 +33,6 @@ class StaticPagesController < ApplicationController
   end
 
   def interns; end
+
+  def job_details; end
 end

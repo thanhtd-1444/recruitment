@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "/about", to: "static_pages#about"
   get "/contact", to: "static_pages#contact"
   get "/interns", to: "static_pages#interns"
+  get "/job-details", to: "static_pages#job_details"
   get "/bussiness_content", to: "static_pages#bussiness_content"
   get "/recruitment_benefit", to: "static_pages#recruitment_benefit"
   get "/specific_skills", to: "static_pages#specific_skills"
