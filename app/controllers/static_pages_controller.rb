@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
     @posts = Post.newest.limit 6
-    @jobs = Job.limit 5
+    @jobs = Job.newest.limit 5
     @candidate = Candidate.new
     @slider_images = Image.publish
   end
