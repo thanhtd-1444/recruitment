@@ -18,6 +18,14 @@ ja:
               blank: can't be blank
             end_date:
               blank: can't be blank
+          admin:
+            attributes:
+              email:
+                blank: can't be blank
+              password:
+                blank: can't be blank
+              confirm_password:
+                blank: can't be blank
         post:
           attributes:
             title:
@@ -38,6 +46,36 @@ ja:
       jobs: Jobs
       slider_images: Slider Images
   admins:
+    admins:
+      index:
+        create: Create
+        id: ID
+        title: Name
+        email: Email
+        role: Role
+        action: Action
+      edit:
+        title: Edit admin information
+      new:
+        title: Create new admin
+      admin_form:
+        name: Name
+        email: Email
+        password: Password
+        confirmation_password: Confirmation password
+        save: Save
+      create:
+        success: Create Admin successfully
+        failure: Create Admin failure
+      update:
+        success: Update Admin successfully
+        failure: Update Admin failure
+      destroy:
+        success: Delete Admin successfully
+        failure: Delete Admin failure
+      publish:
+        success: "%{action} '%{admin}' successfully"
+        failure: "%{action} '%{admin}' failure"
     posts:
       edit:
         title: Edit post information

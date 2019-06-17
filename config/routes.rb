@@ -27,7 +27,8 @@ Rails.application.routes.draw do
   end
 
   namespace :admins do
-    resources :home, only: :index
+    root to: "admins#index"
+
     resources :posts do
       member do
         get :publish
@@ -39,6 +40,7 @@ Rails.application.routes.draw do
       end
     end
     resources :jobs
+    resources :admins
     resources :slider_images do
       member do
         get :publish

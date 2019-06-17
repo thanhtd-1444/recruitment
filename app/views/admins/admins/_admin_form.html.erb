@@ -1,0 +1,27 @@
+<%= form_for [:admins, @admin] do |f| %>
+  <%= render "admins/shared/error_messages", object: f.object %>
+
+  <div class="form-group">
+    <%= f.label :name, t(".name"), class: "col-form-label  required" %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email, t(".email"), class: "col-form-label  required" %>
+    <%= f.email_field :email, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password, t(".password"), class: "col-form-label" %>
+    <%= f.password_field :password, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :confirmation_password, t(".confirmation_password"), class: "col-form-label" %>
+    <%= f.password_field :confirmation_password, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit t(".save"), class: "btn btn-primary" %>
+  </div>
+<% end %>
