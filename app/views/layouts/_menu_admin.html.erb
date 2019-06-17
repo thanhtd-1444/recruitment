@@ -1,7 +1,7 @@
 <div class="sidebar-menu">
   <div class="sidebar-header">
-    <div class="logo">
-      <%= image_tag "admin/icon/logo.png"%>
+    <div class="management-title">
+      <h4> J-V Connection </h4>
     </div>
   </div>
   <div class="main-menu">
@@ -9,9 +9,9 @@
       <nav>
         <ul class="metismenu" id="menu">
           <li>
-            <%= link_to "#" do %>
+            <%= link_to admins_admins_path do %>
               <i class="fa fa-users"></i>
-              <%= t ".users" %>
+              <%= t ".admins" %>
 
             <% end %>
           </li>
