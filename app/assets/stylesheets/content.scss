@@ -384,13 +384,38 @@
 }
 
 .gf-job-meta {
-  background: $theme-color;
-  padding: 20px;
+  padding: 30px;
   overflow: hidden;
-  color: #fff;
+  background: #f8f8f8;
+
+  p {
+    margin: 1.3rem 0;
+    font-weight: bold;
+    font-size: 15px;
+    
+
+    i {
+      color: $theme-color;
+      font-size: 18px;
+      margin-right: 10px;
+    }
+  }
 
   div {
-    padding: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $theme-color;
+  }
+
+  .social-share-wrapper {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .social-share-button {
+    border: none;
+    display: flex;
+    justify-content: space-evenly;
   }
 }
 
@@ -495,5 +520,40 @@ blockquote p {
     font-size: 18px;
     text-align: center;
     font-weight: 500;
+  }
+}
+
+
+.gf-job-detail {
+  .job-title {
+    background-image: image-url("bg-page-title.jpg");
+    padding: 56px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    margin-top: 20px;
+
+    h3 {
+      font-size: 35px;
+    }
+  }
+
+  .separator {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #7fa15a;
+  }
+
+
+  .form-group,
+  .new-comment-form h3 {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .button {
+    margin: 0;
   }
 }

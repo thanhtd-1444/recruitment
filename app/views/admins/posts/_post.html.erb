@@ -16,7 +16,7 @@
           <%= link_to edit_admins_post_path(post), class: "btn btn-primary btn-xs mb-3 mr-1" do %>
             <span class="fa fa-edit"></span>
           <% end %>
-          <%= link_to admins_post_path(post), method: :delete, class: "btn btn-danger btn-xs mb-3 mr-1" do %>
+          <%= link_to admins_post_path(post), method: :delete, data: { confirm: t(".confirm") }, class: "btn btn-danger btn-xs mb-3 mr-1" do %>
             <span class="fa fa-trash-o"></span>
           <% end %>
 

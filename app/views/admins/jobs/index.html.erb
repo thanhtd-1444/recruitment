@@ -40,7 +40,7 @@
                         <%= link_to edit_admins_job_path(job), class: "btn btn-outline-primary btn-xs mb-3 mr-1" do %>
                           <span class="fa fa-edit"></span>
                         <% end %>
-                        <%= link_to admins_job_path(job), method: :delete, class: "btn btn-outline-danger btn-xs mb-3 mr-1" do %>
+                        <%= link_to admins_job_path(job), method: :delete, data: { confirm: t(".confirm") }, class: "btn btn-outline-danger btn-xs mb-3 mr-1" do %>
                           <span class="fa fa-trash-o"></span>
                         <% end %>
                       </div>
