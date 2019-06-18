@@ -3,7 +3,7 @@
   <div class="card card-bordered">
     <%= image_tag slider_image.url.url, class: "card-img-top img-fluid" %>
     <div class="card-body">
-      <%= link_to admins_slider_image_path(slider_image), method: :delete, class: "btn btn-danger btn-xs mb-3 mr-1" do %>
+      <%= link_to admins_slider_image_path(slider_image), method: :delete, data: { confirm: t(".confirm") }, class: "btn btn-danger btn-xs mb-3 mr-1" do %>
         <span class="fa fa-trash-o"></span>
         <%= t(".delete") %>
       <% end %>

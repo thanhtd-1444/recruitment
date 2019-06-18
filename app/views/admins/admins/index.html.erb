@@ -35,7 +35,7 @@
                         <% end %>
 
                         <% if current_admin.manager? && current_admin != admin %>
-                          <%= link_to admins_admin_path(admin), method: :delete, class: "btn btn-outline-danger btn-xs mb-3 mr-1" do %>
+                          <%= link_to admins_admin_path(admin), method: :delete, data: { confirm: t(".confirm") }, class: "btn btn-outline-danger btn-xs mb-3 mr-1" do %>
                             <span class="fa fa-trash-o"></span>
                           <% end %>
                         <% end %>
