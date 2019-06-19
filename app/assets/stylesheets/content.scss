@@ -1,8 +1,10 @@
 .gf-page-heading {
-  padding: 60px 0;
-  background-image: image-url("sakura.jpg");
+  background-image: image-url("page-title-2.jpg");
   background-size: cover;
   position: relative;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  background-position: 50% -40px;
 
   &::before{
     content: "";
