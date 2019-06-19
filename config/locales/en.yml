@@ -92,6 +92,12 @@ en:
         place: Place
         salary: Salary
         save: Save
+        company_name: Company Name
+        cv_info: CV Information
+        benefit: Job Benefit
+        requirement: Job Requirement
+        recruiment_type: How To Apply
+        industry: Industry for VISA
       create:
         success: Create Job successfully
         failure: Create Job failure
@@ -184,6 +190,10 @@ en:
       location: 勤務地
       salary: 給料
       duration: 募集期間
+    show:
+      benefit: 報酬
+      job_info: 仕事情報
+      requirement: 希望の人材
   shared:
     contact_form:
       title: 連絡先を送る
