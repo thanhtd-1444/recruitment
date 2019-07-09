@@ -473,6 +473,19 @@
     }
   }
 
+  .sub-menu {
+    padding-left: 30px;
+    margin-top: 5px;
+
+    li + li {
+      margin-top: 10px;
+    }
+
+    li > a {
+      font-size: 14px;
+    }
+  }
+
 }
 
 .is-sticky .sticky-menu {
@@ -575,4 +588,8 @@ blockquote p {
       background: $theme-color;
     }
   }
+}
+
+.danger-color {
+  color: red;
 }
