@@ -20,6 +20,12 @@
   }
 
   .gf-post-title {
+    a {
+      color: #222;
+      &:hover {
+    		color: #7fa15a;;
+    	}
+    }
     margin-bottom: 10px;
   }
 

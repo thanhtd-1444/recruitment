@@ -4,7 +4,7 @@
       <%= image_tag post.image.url, class: "post-image mr-4" %>
     <% end %>
     <div class="media-body justify-content admin-post-content">
-      
+
       <h5 class="mb-3 mt10"><%= post.title %></h5>
       <%= truncate(post.content, length: 500) %>
 

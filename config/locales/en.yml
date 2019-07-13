@@ -1,164 +1,164 @@
 en:
   record:
-    not_found: " %{object_name} not found"
+    not_found: "Không tìm thấy %{object_name}"
   layouts:
     menu_admin:
-      users: Users
-      candidates: Candidates
-      posts: Posts
-      jobs: Jobs
-      slider_images: Slider Images
+      users: Quản trị viên
+      candidates: Ứng viên
+      posts: Bài báo
+      jobs: Thông tin tuyển dụng
+      slider_images: Slider Image
   admins:
     admins:
       index:
-        create: Create
+        create: Thêm mới
         id: ID
-        title: Name
+        title: Họ Tên
         email: Email
         role: Role
-        action: Action
-        confirm: Do you want to delete this user?
+        action: Thao Tác
+        confirm: Bạn muốn xóa Quản trị viên này?
       edit:
-        title: Edit admin information
+        title: Chỉnh sửa thông tin Quản trị viên
       new:
-        title: Create new admin
+        title: Tạo mới Quản trị viên
       admin_form:
-        name: Name
+        name: Họ Tên
         email: Email
         password: Password
         confirmation_password: Confirmation password
         save: Save
       create:
-        success: Create Admin successfully
-        failure: Create Admin failure
+        success: Tao mới Quản trị viên thành công
+        failure: Tạo mới Quản trị viên thất bại
       update:
-        success: Update Admin successfully
-        failure: Update Admin failure
+        success: Chỉnh sửa thông tin Quản trị viên thành công
+        failure: Chỉnh sửa thông tin Quản trị viên thất bại
       destroy:
-        success: Delete Admin successfully
-        failure: Delete Admin failure
+        success: Xóa Quản trị viên thành công
+        failure: Xóa Quản trị viên thất bại
       publish:
-        success: "%{action} '%{admin}' successfully"
-        failure: "%{action} '%{admin}' failure"
+        success: "%{action} '%{admin}' thành công"
+        failure: "%{action} '%{admin}' thất bại"
     posts:
       edit:
-        title: Edit post information
+        title: Chỉnh sửa nội dung Bài Báo
       new:
-        title: Create new post
+        title: Tạo mới Bài báo
       post_form:
-        title: Post title
-        image: Post image
-        content: Post content
-        publish: Publish?
+        title: Tiêu đề Bài báo
+        image: Ảnh Bài báo
+        content: Nội dung Bài báo
+        publish: Công khai?
         save: Save
       post:
-        publish: Publish
-        unpublish: Unpublish
-        confirm: Do you want to delete this post?
+        publish: Công khai
+        unpublish: Không công khai
+        confirm: Bạn muốn xóa Bài viết này?
       index:
-        create: Create
+        create: Tạo mới
       create:
-        success: Create Post successfully
-        failure: Create Post failure
+        success: Tạo mới Bài báo thành công
+        failure: Tạo mới Bài báo thất bại
       update:
-        success: Update Post successfully
-        failure: Update Post failure
+        success: Chỉnh sửa thông tin Bài báo thành công
+        failure: Chỉnh sửa thông tin Bài báo thất bại
       destroy:
-        success: Delete Post successfully
-        failure: Delete Post failure
+        success: Xóa Bài báo thành công
+        failure: Xóa Bài báo thất bại
       publish:
-        success: "%{action} '%{post}' successfully"
-        failure: "%{action} '%{post}' failure"
+        success: "%{action} '%{post}' thành công"
+        failure: "%{action} '%{post}' thất bại"
     jobs:
       index:
-        create: Create
+        create: Tạo mới
         id: ID
-        title: Job Title
+        title: Tiêu đề Tin tuyển dụng
         quantity: 募集人数
         place: 勤務地
         salary: 給料
         content: 仕事の内容
         expired_time: 募集期間
         action: Action
-        confirm: Do you want to delete this job?
+        confirm: Bạn muốn xóa Tin tuyển dụng này?
 
       edit:
-        title: Edit job information
+        title: Chỉnh sửa Tin tuyển dụng
       new:
-        title: Create new job
+        title: Tạo mới Tin tuyển dụng
       job_form:
-        title: Job title
-        quantity: Quantity
-        place: Place
-        salary: Salary
+        title: Tiêu đề Tin tuyển dụng
+        quantity: Số lượng
+        place: Địa điểm
+        salary: Lương
         save: Save
-        company_name: Company Name
-        cv_info: CV Information
-        benefit: Job Benefit
-        requirement: Job Requirement
-        recruiment_type: How To Apply
-        industry: Industry for VISA
+        company_name: Tên công ty
+        cv_info: Thông tin CV
+        benefit: Chính sách đãi ngộ
+        requirement: Yêu cầu công việc
+        recruiment_type: Nội dung ứng tuyển
+        industry: Cách lấy VISA
       create:
-        success: Create Job successfully
-        failure: Create Job failure
+        success: Tạo mới Tin tuyển dụng thành công
+        failure: Tạo mới Tin tuyển dụng thất bại
       update:
-        success: Update Job successfully
-        failure: Update Job failure
+        success: Chỉnh sửa Tin tuyển dụng thành công
+        failure: Chỉnh sửa Tin tuyển dụng thất bại
       destroy:
-        success: Delete Job successfully
-        failure: Delete Job failure
+        success: Xóa Tin tuyển dụng thành công
+        failure: Xóa Tin tuyển dụng thất bại
       publish:
-        success: "%{action} '%{job}' successfully"
-        failure: "%{action} '%{job}' failure"
+        success: "%{action} '%{job}' thành công"
+        failure: "%{action} '%{job}' thất bại"
     candidates:
       index:
-        title: Candidates
+        title: Ứng viên
         id: ID
-        name: Name
+        name: Họ tên
         email: Email
-        phone_number: Phone Number
+        phone_number: Số điện thoại
         website: Website
-        content: Content
+        content: Nội dung
         action: Action
-        status: Status
-        contacted: Contacted
-        not_contact: Not Contact
+        status: Trạng thái
+        contacted: Đã liên hệ
+        not_contact: Chưa liên hệ
       contact:
-        contacted_success: Xác nhận Đã liên lạc với ứng viên '%{candidate}' thành công.
-        contacted_failure: Xác nhận Đã liên lạc với ứng viên '%{candidate}' không thành công.
-        not_contact_success: Xác nhận Chưa liên lạc với ứng viên '%{candidate}' thành công.
-        not_contact_failure: Xác nhận Chưa liên lạc với ứng viên '%{candidate}' không thành công.
+        contacted_success: Xác nhận [Đã liên lạc] với ứng viên '%{candidate}' thành công.
+        contacted_failure: Xác nhận [Đã liên lạc] với ứng viên '%{candidate}' không thành công.
+        not_contact_success: Xác nhận [Chưa liên lạc] với ứng viên '%{candidate}' thành công.
+        not_contact_failure: Xác nhận [Chưa liên lạc] với ứng viên '%{candidate}' không thành công.
       create:
-        success: Cam on ban da lien he, chung toi se lien lac voi ban som nhat co the
-        failure: Thong tin lien he cua ban khong hop le
+        success: Cảm ơn bạn đã để lại thông tin, Chúng tôi sẽ liên lạc lại với bạn sớm nhất có thể
+        failure: Thông tin liên hệ của bạn không hợp lệ
     slider_images:
       edit:
-        title: Edit Slider Image
+        title: Chỉnh sửa Image
       new:
-        title: Create new Slider Image
+        title: Tạo mới Image
       slider_image_form:
-        slider_image: Slider Image
-        publish: Publish?
+        slider_image: Image
+        publish: Công khai?
         save: Save
-        title: Create new Slider Image
+        title: Tạo mới Image
       slider_image:
-        publish: Publish
-        unpublish: Unpublish
-        confirm: Do you want to delete this picture?
+        publish: Công khai
+        unpublish: Không công khai
+        confirm: Bạn muốn công khai hình ảnh này?
       index:
-        create: Update new Image
+        create: Thay đổi Image
       create:
-        success: Create Slider Image successfully
-        failure: Create Slider Image failure
+        success: Tạo mới Image thành công
+        failure: Tạo mới Image thất bại
       update:
-        success: Update Slider Image successfully
-        failure: Update Slider Image failure
+        success: Thay đổi Image thành công
+        failure: Thay đổi Image thất bại
       destroy:
-        success: Delete Slider Image successfully
-        failure: Delete Slider Image failure
+        success: Xóa Image thành công
+        failure: Xóa Image thất bại
       publish:
-        success: "%{action} Slider Image successfully"
-        failure: "%{action} Slider Image failure"
+        success: "%{action} Image thành công"
+        failure: "%{action} Image thất bại"
   static_pages:
     bussiness_content:
       title: 事業内容
@@ -167,22 +167,23 @@ en:
     engineer_interpreter:
       title: エンジニア・通訳
     home:
-      btn_all_job: See All Jobs
+      btn_all_job: Xem thêm Tin tuyển dụng
 
   posts:
     show:
       comments: Comments
-      recent_posts: Recent Posts
-      share: "Share this:"
+      recent_posts: Tin tuyển dụng liên quan
+      share: "Chia sẻ:"
   comments:
     form:
-      submit: Submit
-      remember: Rememberme with next comments
-      name: Name
+      title: Để lại bình luận
+      submit: Bình luận
+      remember: Ghi nhớ thông tin cho bình luận tiếp theo
+      name: Họ Tên
       email: Email
-      comment: Comment
+      comment: Nội dung bình luận
     create:
-      failure: Error! Please try again
+      failure: Xin vui lòng thử lại
   jobs:
     job_item:
       amount: 募集人数
@@ -203,8 +204,11 @@ en:
       website: Website
       content: コンテンツ
       contact: 提出する
-
   job_comments:
     form:
-      submit: Submit
-      remember: Rememberme with next comments
+      title: Để lại bình luận
+      submit: Bình luận
+      remember: Ghi nhớ thông tin cho bình luận tiếp theo
+      name: Họ Tên
+      email: Email
+      comment: Nội dung bình luận
