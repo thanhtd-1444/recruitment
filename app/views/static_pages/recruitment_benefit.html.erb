@@ -1,5 +1,5 @@
 <%= render partial: "shared/page_header", locals: { title: t(".title") } %>
-<div class="container mt50">
+<div class="container mt50" data-aos="fade-up">
   <p>
     法務省入国管理局様により<br>
     平成２９年末現在における在留外国人数について（確定値）
@@ -108,87 +108,89 @@
     お客様のニーズにお応えできるよう慎重に人材を選考し責任をもって紹介いたしますのでご安心ください。
   </p>
 
-  <h3 class="accent-color">
-    外国人採用の流れ
-  </h3>
+  <div class="row">
+    <h3 class="accent-color">
+      外国人採用の流れ
+    </h3>
 
-  <div class="content-box-wrapper d-flex">
-    <div class="content-box-2">
-      <p class="mb0 text-center">
-         企業様からのご依頼
-        （必要な人材、人数、時期、条件などを確認。）
-      </p>
+    <div class="content-box-wrapper d-flex">
+      <div class="content-box-2">
+        <p class="mb0 text-center">
+           企業様からのご依頼
+          （必要な人材、人数、時期、条件などを確認。）
+        </p>
+      </div>
+
+      <div class="content-box-2">
+        <p class="mb0 text-center">
+            募集と人選を開始します。応募者が見つかるまでの日数は、難易度にもよりますが数日から数カ月を要します。
+        </p>
+      </div>
+
+      <div class="content-box-2">
+        <p class="mb0 text-center">
+          ニーズに合った応募者が見つかりましたら　プロフィールを書面でお見せします。
+        </p>
+      </div>
     </div>
 
-    <div class="content-box-2">
-      <p class="mb0 text-center">
-          募集と人選を開始します。応募者が見つかるまでの日数は、難易度にもよりますが数日から数カ月を要します。
-      </p>
+    <div class="content-box-wrapper d-flex mt30">
+        <div class="content-box-2">
+          <p class="mb0 text-center">
+              面談に先立って、弊社と取引契約、秘密保持契約の締結をいただきます。
+          </p>
+        </div>
+
+        <div class="content-box-2">
+          <p class="mb0 text-center">
+               企業様 + J-V CONNECTIONにて面接、採用（SKYPE, LINE等でも対応いたします。）
+          </p>
+        </div>
+
+        <div class="content-box-2">
+          <p class="mb0 text-center">
+               お客様と応募者の間で、雇用契約を締結していただきます。
+          </p>
+        </div>
     </div>
 
-    <div class="content-box-2">
-      <p class="mb0 text-center">
-        ニーズに合った応募者が見つかりましたら　プロフィールを書面でお見せします。
-      </p>
+    <div class="content-box-wrapper d-flex mt30">
+        <div class="content-box-2">
+          <p class="mb0 text-center">
+               VISA申請書類作成、申請
+              (約1ヶ月。3カ月以上かかることも稀にあります。)
+          </p>
+        </div>
+
+        <div class="content-box-2">
+          <p class="mb0 text-center">
+            入国・入社
+            ビザが下りれば入社の準備を早急に進めます
+          </p>
+        </div>
+
+        <div class="content-box-2">
+          <p class="mb0 text-center">
+            人材紹介の手数料を、お支払いただきます。
+          </p>
+        </div>
     </div>
   </div>
-
-  <div class="content-box-wrapper d-flex mt30">
-      <div class="content-box-2">
-        <p class="mb0 text-center">
-            面談に先立って、弊社と取引契約、秘密保持契約の締結をいただきます。
-        </p>
-      </div>
-
-      <div class="content-box-2">
-        <p class="mb0 text-center">
-             企業様 + J-V CONNECTIONにて面接、採用（SKYPE, LINE等でも対応いたします。）
-        </p>
-      </div>
-
-      <div class="content-box-2">
-        <p class="mb0 text-center">
-             お客様と応募者の間で、雇用契約を締結していただきます。
-        </p>
-      </div>
-  </div>
-
-  <div class="content-box-wrapper d-flex mt30">
-      <div class="content-box-2">
-        <p class="mb0 text-center">
-             VISA申請書類作成、申請
-            (約1ヶ月。3カ月以上かかることも稀にあります。)
-        </p>
-      </div>
-
-      <div class="content-box-2">
-        <p class="mb0 text-center">
-          入国・入社
-          ビザが下りれば入社の準備を早急に進めます
-        </p>
-      </div>
-
-      <div class="content-box-2">
-        <p class="mb0 text-center">
-          人材紹介の手数料を、お支払いただきます。
-        </p>
-      </div>
-  </div>
-
-  <h3 class="accent-color mt30">
+  <div class="row">
+    <h3 class="accent-color mt30">
     面接の雰囲気
   </h3>
-
-	<div class="grid">
-  	<div class="grid-item col-md-3"><%= image_tag  "recruitment/7.png" %></div>
-  	<div class="grid-item col-md-3"><%= image_tag  "recruitment/8.jpg" %></div>
-		<div class="grid-item col-md-3"><%= image_tag  "recruitment/9.png" %></div>
-		<div class="grid-item col-md-3"><%= image_tag  "recruitment/10.png" %></div>
-		<div class="grid-item col-md-3"><%= image_tag  "recruitment/12.jpg" %></div>
-		<div class="grid-item col-md-3"><%= image_tag  "recruitment/13.png" %></div>
-		<div class="grid-item col-md-3"><%= image_tag  "recruitment/14.png" %></div>
-		<div class="grid-item col-md-3"><%= image_tag  "recruitment/11.png" %></div>
-	</div>
+    <div class="grid d-flex flex-wrap">
+      <div class="grid-item col-md-3"><%= image_tag  "recruitment/7.jpg" %></div>
+      <div class="grid-item col-md-3"><%= image_tag  "recruitment/8.jpg" %></div>
+      <div class="grid-item col-md-3"><%= image_tag  "recruitment/2.jpg" %></div>
+      <div class="grid-item col-md-3"><%= image_tag  "recruitment/3.jpg" %></div>
+      <div class="grid-item col-md-3"><%= image_tag  "recruitment/4.jpg" %></div>
+      <div class="grid-item col-md-3"><%= image_tag  "recruitment/1.jpg" %></div>
+      <div class="grid-item col-md-3"><%= image_tag  "recruitment/5.jpg" %></div>
+      <div class="grid-item col-md-3"><%= image_tag  "recruitment/6.jpg" %></div>
+    </div>
+  </div>
 
 </div>
 
