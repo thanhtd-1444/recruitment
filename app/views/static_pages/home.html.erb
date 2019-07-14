@@ -6,7 +6,7 @@
     </div>
 </section>
 
-<section class="gf-jobs">
+<section class="gf-jobs" data-aos="fade-up">
      <div class="container">
          <%= render partial: "shared/pagetitle", locals: { pagetitle: '求人情報一覧' } %>
          <%= render partial: "jobs/job_item", locals: {jobs: @jobs} %>
@@ -16,7 +16,7 @@
     </div>
 </section>
 
-<section class="gf-messages">
+<section class="gf-messages" data-aos="fade-up">
         <%= render "message" %>
 </section>
 

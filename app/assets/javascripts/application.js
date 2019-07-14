@@ -81,11 +81,6 @@ $(document).on('turbolinks:load', function() {
         anchorPlacement: 'top-bottom'
       });
 
-    $('.grid').masonry({
-        // options...
-        itemSelector: '.grid-item',
-    });
-
     $(window).scroll(function(){
         if ($(this).scrollTop() > 500) {
             $('#scroll').addClass('in');
