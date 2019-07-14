@@ -1,5 +1,5 @@
 <!-- <%= render "layouts/slider", slider_images: @slider_images %> -->
-<%= image_tag @slider_image.url.url, class: "owl-carousel slider-image" %>
+<%= (image_tag @slider_image.url.url, class: "owl-carousel slider-image") if @slider_image %>
 
 <section data-aos="fade-up">
     <div class="container">
