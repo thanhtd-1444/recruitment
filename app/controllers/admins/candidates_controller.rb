@@ -1,4 +1,5 @@
 class Admins::CandidatesController < Admins::BaseController
+  skip_before_action :authenticate_admin!, only: :create
   before_action :load_candidate, only: :contact
 
   def index
@@ -31,12 +32,12 @@ class Admins::CandidatesController < Admins::BaseController
     if @candidate.save
       flash[:success] = t ".success"
 
-      ContactMailer.contact_email().deliver 
+      ContactMailer.contact_email().deliver
     else
       flash[:danger] = t ".failure"
     end
 
-    redirect_to root_path
+    redirect_to request.referrer || root_path
   end
 
   private
