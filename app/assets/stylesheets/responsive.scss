@@ -156,4 +156,18 @@
   .alignright {
     width: 500px;
   }
+
+  .topbar-wrapper {
+    flex-flow: wrap;
+    justify-content: center;
+  }
+
+  .information {
+    white-space: nowrap;
+    margin-top: 20px;
+
+    div:last-of-type {
+      display: none;
+    }
+  }
 }
