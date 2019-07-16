@@ -6,5 +6,7 @@ class Admin < ApplicationRecord
 
   enum role: [:supporter, :manager]
 
+  validates :name, presence: true
+
   scope :newest, -> {order role: :desc}
 end

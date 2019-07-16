@@ -5,41 +5,52 @@ ja:
         job:
           attributes:
             title:
-              blank: can't be blank
+              blank: は必ず入力してください。
             quantity:
-              blank: can't be blank
+              blank: は必ず入力してください。
             place:
-              blank: can't be blank
+              blank: は必ず入力してください。
             salary:
-              blank: can't be blank
+              blank: は必ず入力してください。
             content:
-              blank: can't be blank
+              blank: は必ず入力してください。
             start_date:
-              blank: can't be blank
+              blank: は必ず入力してください。
             end_date:
-              blank: can't be blank
+              blank: は必ず入力してください。
+            company_name:
+              blank: は必ず入力してください。
+            job_title:
+              blank: は必ず入力してください。
+            cv_content:
+              blank: は必ず入力してください。
+            job_benefit:
+              blank: は必ず入力してください。
+            job_requirement:
+              blank: は必ず入力してください。
+            recruiment_type:
+              blank: は必ず入力してください。
         admin:
           attributes:
+            name:
+              blank: は必ず入力してください。
             email:
-              blank: can't be blank
+              blank: は必ず入力してください。
             password:
-              blank: can't be blank
+              blank: は必ず入力してください。
+              too_short: は短すぎです。
             confirm_password:
-              blank: can't be blank
+              blank: は必ず入力してください。
         post:
           attributes:
             title:
-              blank: can't be blank
+              blank: は必ず入力してください。
             content:
-              blank: can't be blank
+              blank: は必ず入力してください。
         image:
           attributes:
             url:
-              blank: can't be blank
-        admin:
-          attributes:
-            password:
-              too_short: too short.
+              blank: は必ず入力してください。
   record:
     not_found: "%{object_name}見つかりませんでした"
   layouts:
