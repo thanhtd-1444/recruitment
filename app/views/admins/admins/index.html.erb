@@ -2,9 +2,11 @@
   <div class="col-12 mt-5">
     <div class="card">
       <div class="card-body">
-        <%= link_to new_admins_admin_path, class: "btn btn-outline-primary" do %>
-          <span class="fa fa-plus-circle"></span>
-          <%= t ".create" %>
+        <% if current_admin.manager? && current_admin != admin %>
+          <%= link_to new_admins_admin_path, class: "btn btn-outline-primary" do %>
+            <span class="fa fa-plus-circle"></span>
+            <%= t ".create" %>
+          <% end %>
         <% end %>
         <br><br>
         <div class="single-table">
