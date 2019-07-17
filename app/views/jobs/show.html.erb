@@ -111,13 +111,13 @@
           </span>
         </div>
         <div>
-          <p><i class="fa fa-calendar mr5"></i> Thời gian nạp hồ sơ</p>
+          <p><i class="fa fa-calendar mr5"></i> 履歴書提出期限</p>
           <span>
             <%= @job.start_date.strftime("%Y-%m-%d") %> - <%= @job.end_date.strftime("%Y-%m-%d") %>
           </span>
         </div>
         <div class="social-share-wrapper">
-          <p><i class="fa fa-share-alt"></i>Chia sẻ công việc </p>
+          <p><i class="fa fa-share-alt"></i>情報共有 </p>
           <%= social_share_button_tag(@job.title) %>
         </div>
       </div>

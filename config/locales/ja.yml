@@ -66,17 +66,18 @@ ja:
         create: 新しく追加します
         id: ID
         name: 氏名
-        email: Email
+        email: メール
         role: Role
         action: 操作
         confirm: この管理者を解消しますか？
       edit:
         title: 管理者情報を編集
+        permission_denied: この機能を利用する権限がありません。
       new:
         title: 新しい管理者を追加
       admin_form:
         name: 氏名
-        email: Email
+        email: メール
         password: Password
         confirmation_password: Confirmation password
         save: Save
@@ -166,7 +167,7 @@ ja:
         title: 求職者
         id: ID
         name: 氏名
-        email: Email
+        email: メール
         phone_number: Phone Number
         website: Website
         content: 内容
@@ -232,7 +233,7 @@ ja:
       submit: コメント
       remember: 次のコメントに記録されますか？
       name: 氏名
-      email: Email
+      email: メール
       comment: コメント内容
     create:
       failure: もう一度やってください
@@ -262,5 +263,5 @@ ja:
       submit: コメント
       remember: 次のコメントに記録されますか？
       name: 氏名
-      email: Email
+      email: メール
       comment: コメント内容
