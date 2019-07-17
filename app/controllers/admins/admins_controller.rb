@@ -22,6 +22,10 @@ class Admins::AdminsController < Admins::BaseController
   end
 
   def edit
+    if @admin != current_admin
+      flash[:danger] = t ".permission_denied"
+      redirect_to admins_admins_path
+    end
   end
 
   def show
