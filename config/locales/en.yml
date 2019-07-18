@@ -198,8 +198,8 @@ en:
   shared:
     contact_form:
       title: 連絡先を送る
-      name: 名前と姓
-      email: メール
+      name: お名前
+      email: メールアドレス
       phone_number: 電話番号
       website: Website
       content: コンテンツ
