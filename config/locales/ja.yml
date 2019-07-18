@@ -65,8 +65,8 @@ ja:
       index:
         create: 新しく追加します
         id: ID
-        name: 氏名
-        email: メール
+        name: お名前
+        email: メールアドレス
         role: Role
         action: 操作
         confirm: この管理者を解消しますか？
@@ -76,8 +76,8 @@ ja:
       new:
         title: 新しい管理者を追加
       admin_form:
-        name: 氏名
-        email: メール
+        name: お名前
+        email: メールアドレス
         password: Password
         confirmation_password: Confirmation password
         save: Save
@@ -166,8 +166,8 @@ ja:
       index:
         title: 求職者
         id: ID
-        name: 氏名
-        email: メール
+        name: お名前
+        email: メールアドレス
         phone_number: Phone Number
         website: Website
         content: 内容
@@ -232,8 +232,8 @@ ja:
       title: コメント
       submit: コメント
       remember: 次のコメントに記録されますか？
-      name: 氏名
-      email: メール
+      name: お名前
+      email: メールアドレス
       comment: コメント内容
     create:
       failure: もう一度やってください
@@ -251,17 +251,17 @@ ja:
   shared:
     contact_form:
       title: 連絡先を送る
-      name: 名前と姓
-      email: メール
+      name: お名前
+      email: メールアドレス
       phone_number: 電話番号
       website: Website
-      content: コンテンツ
+      content: お問い合わせ
       contact: 提出する
   job_comments:
     form:
       title: コメント
       submit: コメント
       remember: 次のコメントに記録されますか？
-      name: 氏名
-      email: メール
+      name: お名前
+      email: メールアドレス
       comment: コメント内容

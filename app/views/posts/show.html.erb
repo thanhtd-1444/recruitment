@@ -33,7 +33,7 @@
 			</div>
 			<% if @post.comments.count > 0 %>
 				<div class="comment-wrapper">
-					<h3>
+					<h3 class="accent-color">
 						<%= t ".comments" %>
 					</h3>
 					<%= render partial: "comment", locals: {comments: @comments} %>
