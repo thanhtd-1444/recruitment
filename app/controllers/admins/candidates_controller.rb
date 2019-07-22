@@ -43,7 +43,7 @@ class Admins::CandidatesController < Admins::BaseController
   private
 
   def candidate_params
-    params.require(:candidate).permit :name, :email, :phone_number, :website, :content
+    params.require(:candidate).permit :name, :email, :phone_number, :company_name, :content
   end
 
   def load_candidate

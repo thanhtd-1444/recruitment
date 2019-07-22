@@ -12,11 +12,11 @@ Job.destroy_all
 
 category = Category.create name: "Post"
 
-Admin.create email: "tran.thanh.tam@sun-asterisk.com", password: "Aa@123456789", password_confirmation: "Aa@123456789"
+Admin.create! name: "TamTT", email: "tran.thanh.tam@sun-asterisk.com", password: "Aa@123456789", password_confirmation: "Aa@123456789"
 15.times.each do |i|
-  Post.create title: "Post #{i}", content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elit",
+  Post.create! title: "Post #{i}", content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elitconsectetuer adipiscing elit",
     publish_status: :publish, category: category
-  Job.create title: "Job infor #{i}", content: "content test", quantity: "20 employees (10 males, 10 female)",
+  Job.create! title: "Job infor #{i}", content: "content test", quantity: "20 employees (10 males, 10 female)",
     place: "Tokyo, Japan", salary: "1.000.000 Yen/Month", start_date: 1.month.ago.beginning_of_month, end_date: 5.month.from_now.end_of_month
 end
 
