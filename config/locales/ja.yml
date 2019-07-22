@@ -220,7 +220,7 @@ ja:
       title: エンジニア・通訳
     home:
       btn_all_job: もっと見る
-      btn_all_posts: すべての投稿
+      btn_all_posts: もっと見る
 
   posts:
     show:
@@ -250,13 +250,13 @@ ja:
       requirement: 希望の人材
   shared:
     contact_form:
-      title: 連絡先を送る
+      title: サービスに関するお問い合わせ
       name: お名前
       email: メールアドレス
       phone_number: 電話番号
       website: Website
       content: お問い合わせ
-      contact: 提出する
+      contact: 内容を送信
   job_comments:
     form:
       title: コメント
