@@ -92,6 +92,20 @@ ActiveRecord::Schema.define(version: 2019_07_23_102147) do
     t.text "documents"
   end
 
+  create_table "locations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "photos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "vendor_id"
+    t.string "photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["vendor_id"], name: "index_photos_on_vendor_id"
+  end
+
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.string "image"
@@ -103,7 +117,20 @@ ActiveRecord::Schema.define(version: 2019_07_23_102147) do
     t.index ["category_id"], name: "index_posts_on_category_id"
   end
 
+  create_table "vendors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.bigint "location_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "picture"
+    t.string "logo"
+    t.index ["location_id"], name: "index_vendors_on_location_id"
+  end
+
   add_foreign_key "comments", "posts"
   add_foreign_key "job_comments", "jobs"
+  add_foreign_key "photos", "vendors"
   add_foreign_key "posts", "categories"
+  add_foreign_key "vendors", "locations"
 end

@@ -5,74 +5,84 @@
   <div class="separator"></div>
   <div class="row">
     <div class="col-lg-8 gf-job-detail">
-      <div class="content-box">
-        <h3><%= t(".benefit") %></h3>
-        <div class="d-flex">
-          <h5 class="mr10">給与:</h5>
-          <p>
-            <%= @job.salary %>
-          </p>
-        </div>
-
-        <div>
-          <h5>待遇</h5>
+      <div class="job-detail-content">
+        <div class="mb40">
+          <h5>職種</h5>
           <div class="ml30">
-            <%= raw @job.job_benefit %>
+            <%= raw @job.content %>
           </div>
         </div>
 
-      </div>
-
-      <div class="content-box mt30">
-        <h3><%= t(".job_info") %></h3>
-        <div class="d-flex">
-          <h5 class="mr10">企業名:</h5>
-          <p>
-            <%= @job.company_name %>
-          </p>
+        <div class="mb40">
+          <h5>勤務先</h5>
+          <div class="ml30">
+            <%= @job.place %>
+          </div>
         </div>
 
-        <div class="d-flex">
-          <h5 class="mr10">勤務地:</h5>
-          <p>
-            <%=@job.place %>
-          </p>
+        <div class="mb40">
+          <h5>勤務時間</h5>
+          <div class="ml30">
+            <%= @job.working_hours %>
+          </div>
+        </div>
+        
+        <div class="mb40">
+          <h5>給与</h5>
+          <div class="ml30">
+            <%= @job.salary %>
+          </div>
+        </div>
+        
+        <div class="mb40">
+          <h5>手当</h5>
+          <div class="ml30">
+            <%= raw @job.allowance %>
+          </div>
+        </div>
+        
+        <div class="mb40">
+          <h5>昇給</h5>
+          <div class="ml30">
+            <%= @job.salary_raise %>
+          </div>
+        </div>
+        
+        <div class="mb40">
+          <h5>休日</h5>
+          <div class="ml30">
+            <%= @job.holiday %>
+          </div>
+        </div>
+        
+        <div class="mb40">
+          <h5>休暇</h5>
+          <div class="ml30">
+            <%= @job.vacation %>
+          </div>
+        </div>
+        
+        <div class="mb40">
+          <h5>社会保険</h5>
+          <div class="ml30">
+            <%= raw @job.social_insurance %>
+          </div>
+        </div>
+        
+        <div class="mb40">
+          <h5>福利厚生</h5>
+          <div class="ml30">
+            <%= raw @job.welfare %>
+          </div>
         </div>
 
-        <div class="d-flex">
-          <h5 class="mr10">ビザ資格:</h5>
-          <p>
-            <%=@job.job_title %>
-          </p>
+        <div class="mb40">
+          <h5>提出書類</h5>
+          <div class="ml30">
+            <%= raw @job.documents %>
+          </div>
         </div>
-        <div class="d-flex">
-          <h5 class="mr10">職種:</h5>
-          <p>
-            <%=@job.cv_content %>
-          </p>
-        </div>
-
-        <div class="d-flex">
-          <h5 class="mr10">採用予定数:</h5>
-          <p>
-            <%=@job.quantity %>
-          </p>
-        </div>
-
-        <div class="d-flex">
-          <h5 class="mr10">募集方法:</h5>
-          <p>
-            <%=@job.recruiment_type %>
-          </p>
-        </div>
-
-      </div>
-
-      <div class="content-box mt30">
-        <h3><%= t ".requirement" %></h3>
-        <div class="ml30">
-          <%= raw @job.job_requirement %>
-        </div>
+        
       </div>
 
       <% if @job.job_comments.count > 0 %>
@@ -113,7 +123,7 @@
         <div>
           <p><i class="fa fa-calendar mr5"></i> 履歴書提出期限</p>
           <span>
-            <%= @job.start_date.strftime("%Y-%m-%d") %> - <%= @job.end_date.strftime("%Y-%m-%d") %>
+            <%= @job.start_date.strftime("%Y/%m/%d") %> - <%= @job.end_date.strftime("%Y/%m/%d") %>
           </span>
         </div>
         <div class="social-share-wrapper">

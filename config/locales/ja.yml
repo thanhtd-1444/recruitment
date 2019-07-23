@@ -144,12 +144,15 @@ ja:
         place: 勤務地
         salary: 給料
         save: Save
-        company_name: 会社名
-        cv_info: 履歴書の内容
-        benefit: 優待制度
-        requirement: 仕事
-        recruiment_type: 応募内容
-        industry: ビザ取得の方法
+        content: 職種
+        working_hours: 勤務時間
+        allowance: 手当
+        salary_raise: 昇給
+        holiday: 休日
+        vacation: 休暇
+        social_insurance: 社会保険
+        welfare: 福利厚生
+        documents: 提出書類
       create:
         success: 求人情報の追加ができました
         failure: 求人情報の追加に失敗しました

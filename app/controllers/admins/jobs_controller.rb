@@ -51,8 +51,9 @@ class Admins::JobsController < Admins::BaseController
 
   def job_params
     params.require(:job).permit(:title, :quantity, :place, :salary, :content,
-                                :start_date, :end_date, :recruiment_type, :job_benefit,
-                                :company_name, :job_title, :cv_content, :job_requirement
+                                :start_date, :end_date, :working_hours, :allowance,
+                                :salary_raise, :holiday, :vacation, :social_insurance,
+                                :welfare, :documents
                                 )
   end
 
